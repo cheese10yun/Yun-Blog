@@ -67,3 +67,4 @@ debug.log
 public/
 .deploy/
 themes/
+/.deploy_git/
