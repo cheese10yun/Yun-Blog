@@ -1,5 +1,7 @@
 ---
+layout: post
 title: Node.JS로 카카오봇 만들기
+catalog: true
 date: 2017-02-16
 tags: [Kakao, Bot, Node]
 ---

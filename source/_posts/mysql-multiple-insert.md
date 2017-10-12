@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Node Mysql Multiple Insert
 date: 2017-01-31
 tags: [Node, Mysql, Multiple Insert]

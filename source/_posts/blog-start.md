@@ -1,5 +1,7 @@
 ---
+layout: post
 title: 블로그를 시작하려는 당신에게
+catalog: true
 date: 2017-01-28
 ---
 

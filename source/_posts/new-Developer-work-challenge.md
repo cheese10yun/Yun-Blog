@@ -1,5 +1,7 @@
 ---
+layout: post
 title: 신입 개발자 취업도전기
+catalog: true
 date: 2016-12-13
 
 ---

@@ -1,6 +1,8 @@
 ---
+layout: post
 title: PM2 이용한 Node 프로세스 관리
 date: 2016-12-20
+catalog: true
 tags: [Node, PM2, Process Management]
 
 ---

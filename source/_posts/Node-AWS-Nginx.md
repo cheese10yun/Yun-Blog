@@ -1,6 +1,8 @@
 ---
+layout: post
 title: AWS EC2 Nginx Node.js 설정
 date: 2016-12-13
+catalog: true
 tags: [Nginx, Node, AWS, EC2]
 ---
 

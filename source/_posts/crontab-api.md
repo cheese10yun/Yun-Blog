@@ -1,5 +1,7 @@
 ---
+layout: post
 title: Crontab을 이용한 노드 API 호출
+catalog: true
 author: Yun
 date: 2017-01-11
 tags: [Node, Crontab, Scheduler]

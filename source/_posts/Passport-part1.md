@@ -1,6 +1,8 @@
 ---
+layout: post
 title: Passport를 이용한 Login
 date: 2017-01-01
+catalog: true
 tags: [Node, Login, Passport]
 ---
 

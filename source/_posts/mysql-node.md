@@ -1,6 +1,8 @@
 ---
+layout: post
 title: Node.JS + Mysql 연동
 date: 2017-01-05
+catalog: true
 tags: [Node, Mysql]
 ---
 

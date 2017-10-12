@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "[Hexo] Theme BeanTech"
 catalog: true
 date: 2017-03-18 10:51:24

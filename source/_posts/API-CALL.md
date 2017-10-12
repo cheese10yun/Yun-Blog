@@ -1,6 +1,8 @@
 ---
+layout: post
 title: Node 다른 서버 API 호출
 date: 2017-02-05
+catalog: true
 tags: 
 - Node
 - API
