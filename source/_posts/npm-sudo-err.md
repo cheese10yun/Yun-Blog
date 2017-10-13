@@ -3,7 +3,8 @@ layout: post
 title: npm sudo 권한으로 설치시 오류 해결
 date: 2017-02-11
 catalog: true
-tags: [NPM, Error]
+tags: 
+- NPM
 ---
 
 ```bash

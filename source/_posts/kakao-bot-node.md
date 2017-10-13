@@ -3,8 +3,15 @@ layout: post
 title: Node.JS로 카카오봇 만들기
 catalog: true
 date: 2017-02-16
-tags: [Kakao, Bot, Node]
+tags: 
+- Kakao 
+- Bot
+- Node
 ---
+
+<iframe src="https://ghbtns.com/github-btn.html?user=cheese10yun&repo=KaKaoBot-Node&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=cheese10yun&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="220px" height="30px"></iframe>
 
 **전체소스는 [GitHub branch develop-base](https://github.com/cheese10yun/Node-Boot)에서 확인할 수 있습니다.**
 

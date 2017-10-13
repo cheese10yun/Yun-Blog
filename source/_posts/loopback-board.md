@@ -8,7 +8,7 @@ tags:
 - LoopBack
 - Node
 - JavaScript
-catagories:
+categories:
 - LoopBack
 ---
 

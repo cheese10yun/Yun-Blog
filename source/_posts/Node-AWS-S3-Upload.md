@@ -3,7 +3,12 @@ layout: post
 title: Node AWS S3 업로드
 date: 2017-02-08
 catalog: true
-tags: [Node, JavaScript, imagemin, AWS, S3, Image, Upload]
+tags: 
+- Node
+- imagemin
+- AWS
+- S3 
+- Image Upload
 ---
 
 

@@ -11,7 +11,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://cheese10yun.github.io/       # Note: don't forget to modify the CNAME file to your url
+url: https://cheese10yun.github.io/
 root: /
 permalink: :title/
 permalink_defaults:
@@ -23,13 +23,13 @@ SEOTitle: Yun Blog | 기술 블로그
 email: cheese10yun@gmail.com
 description: ""
 keyword: ""
-header-img: img/header_img/home-bg-2-dark.png
+header-img: img/header_img/tag-bg.png
 signature: true #show signature
 signature-img: img/signature/BeanTechSign-white.png
 
 
 # SNS settings
-# RSS: false
+# RSS: true
 # weibo_username:     Demonbaneen
 # zhihu_username:     Demonbane
 github_username:    cheese10yun
@@ -42,7 +42,7 @@ anchorjs: true                          # if you want to customize anchor. check
 
 
 # Disqus settings
-disqus_username: engineeryun
+disqus_username: yun-blog
 
 # Duoshuo settings
 # duoshuo_username: kaijun
@@ -54,8 +54,8 @@ duoshuo_share: true                     # set to false if you want to use Commen
 # Baidu Analytics
 # ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
 # Google Analytics
-#ga_track_id: 'UA-90907312-1'          # Format: UA-xxxxxx-xx
-#ga_domain: https://cheese10yun.github.io/
+ga_track_id: 'UA-90907312-1'          # Format: UA-xxxxxx-xx
+ga_domain: https://cheese10yun.github.io/
 
 
 # Sidebar settings
@@ -63,12 +63,12 @@ sidebar: true                       # whether or not using Sidebar.
 sidebar-about-description: "초고수가 되자"
 sidebar-avatar: img/ironman-draw.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 widgets:
-- featured-tags
+#- featured-tags
+- category
 - short-about
 - recent-posts
-- friends-blog
-# - archive
-# - category
+# - friends-blog
+- archive
 
 # widget behavior
 ## Archive
@@ -80,6 +80,24 @@ show_count: true
 featured-tags: true                     # whether or not using Feature-Tags
 featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
 
+# nofollow
+nofollow:
+    enable: true
+    exclude:
+    - exclude1.com
+    - exclude2.com
+
+# robotstxt
+robotstxt:
+  useragent: "*"
+  disallow:
+    - /one_file_to_disallow.html
+    - /2nd_file_to_disallow.html
+    - /3rd_file_to_disallow.html
+  allow:
+    - /one_file_to_allow.html
+    - /2nd_file_to_allow.html
+    - /3rd_file_to_allow.html
 
 ## Friends
 #friends: [
@@ -100,7 +118,6 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 
 
 #Custom Setting End
-
 
 
 # Directory
@@ -126,7 +143,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: true
+  auto_detect: false
   tab_replace:
 
 # Category & Tag
@@ -168,6 +185,7 @@ markdown:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: beantech
+
 
 #sitemap
 sitemap:

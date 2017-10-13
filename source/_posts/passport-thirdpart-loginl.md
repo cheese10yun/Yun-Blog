@@ -3,7 +3,13 @@ layout: post
 title: Passport를 이용한 네이버, 카카오, 페이스북 로그인
 date: 2017-01-21
 catalog: true
-tags: [Node, Passport, Login, Kakao, Naver, Facebook]
+tags: 
+ - Node
+ - Passport
+ - Login
+ - Kakao
+ - Naver
+ - Facebook
 ---
 
 

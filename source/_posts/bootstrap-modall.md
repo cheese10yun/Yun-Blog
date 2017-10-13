@@ -3,7 +3,9 @@ layout: post
 title: Bootstrap Modal 입력값 초기화
 catalog: true
 date: 2017-01-10
-tags: [Bootstrap, Modal]
+tags: 
+- Bootstrap
+- Modal
 ---
 
 ![EC2 Innound](https://i.imgur.com/SHu3JYX.png)

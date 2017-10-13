@@ -3,7 +3,10 @@ layout: post
 title: Passport를 이용한 Login
 date: 2017-01-01
 catalog: true
-tags: [Node, Login, Passport]
+tags: 
+- Node
+- Login
+- Passport
 ---
 
 ![EC2 Innound](https://i.imgur.com/MlUddzo.png)

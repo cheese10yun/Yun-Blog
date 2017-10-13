@@ -3,7 +3,11 @@ layout: post
 title: Node Passport를 이용한 Login + Mysql
 date: 2017-01-07
 catalog: true
-tags: [Node, Passport, Mysql, Login]
+tags: 
+- Node
+- Passport
+- Mysql
+- Login
 ---
 
 
