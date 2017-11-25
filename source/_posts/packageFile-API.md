@@ -3,7 +3,9 @@ layout: post
 title: Package.json 파일로 API 버전 설정
 date: 2017-10-14 01:31:24
 subtitle:
+catalog: true
 header-img:
+thumbnail: https://i.imgur.com/cNL3e5B.png
 tags:
 - Node
 - Package
@@ -11,7 +13,6 @@ tags:
 categories: 
 - [Node]
 ---
-
 
 ## 프로젝트 구성
 `package.json` 파일로 API URL을 설정하는 간단한 방법을 포스팅 해보겠습니다. 

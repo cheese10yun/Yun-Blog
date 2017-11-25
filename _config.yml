@@ -21,15 +21,15 @@ permalink_defaults:
 # Site settings
 SEOTitle: Yun Blog | 기술 블로그
 email: cheese10yun@gmail.com
-description: ""
-keyword: ""
+description: "Yun Blog | 기술 블로그"
+keyword: "Node NodeJs Spring Spring Boot Javascript"
 header-img: img/header_img/tag-bg.png
 signature: true #show signature
 signature-img: img/signature/BeanTechSign-white.png
 
 
 # SNS settings
-# RSS: true
+RSS: true
 # weibo_username:     Demonbaneen
 # zhihu_username:     Demonbane
 github_username:    cheese10yun
@@ -65,7 +65,7 @@ sidebar-avatar: img/ironman-draw.png      # use absolute URL, seeing it's used i
 widgets:
 #- featured-tags
 - category
-- short-about
+#- short-about
 - recent-posts
 # - friends-blog
 - archive
@@ -98,6 +98,14 @@ robotstxt:
     - /one_file_to_allow.html
     - /2nd_file_to_allow.html
     - /3rd_file_to_allow.html
+
+# feed
+
+feed:
+  type: atom
+  path: feed.xml
+  limit: 20
+  hub:
 
 ## Friends
 #friends: [

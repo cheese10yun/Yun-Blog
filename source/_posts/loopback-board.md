@@ -2,6 +2,7 @@
 layout: post
 title: "Loopback 게시판 만들기 (1)"
 date: 2017-05-27
+catalog: true
 subtitle: "초간단 게시판 만들기"
 tags:
 - LoopBack

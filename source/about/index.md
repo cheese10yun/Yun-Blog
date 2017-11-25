@@ -7,4 +7,5 @@ header-img: "img/header_img/home-bg-2-dark.png"
 comments: true
 ---
 
-... About... Me
+<div class="github-card" data-github="cheese10yun" data-width="500" data-height="180" data-theme="default"></div>
+<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
