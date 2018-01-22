@@ -10,8 +10,6 @@ tags:
 - Builder Pattern
 ---
 
-# 인텔리제이로 Builder Pattern 쉽게 구현하기
-
 이미 많은 분들이 빌더 패턴 관련해서 포스팅을 잘 정리해주셔서 빌더 패턴에 대해서 설명 해주기 보다는 인텔리제이 플러그인을 활용해서 좀 쉽게 사용할 수 있는 팁을 포스팅을 해보겠습니다.
 물론 Lombok을 활용해서 빌더를 손쉽게 사용할 수있지만 Lombok을 사용하지 않고도 쉽게 만들 수 있는 방법을 소개해드리겠습니다.
 
@@ -59,7 +57,7 @@ Member member = new Member(name, email, mobile ....)
 * 빌더 패턴을 사용해서 필수 값은 생성자로 옵션 값은 빌더 클래스로 작성한다.
 
 
-#### MemberBuilder.class
+### MemberBuilder.class
 
 ```java
 public final class MemberBuilder {
