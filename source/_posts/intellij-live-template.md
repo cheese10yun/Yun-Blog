@@ -3,10 +3,10 @@ layout: post
 title: IntelliJ Live Template
 subtitle: IntelliJ Tip
 catalog: true
-header-img: 'https://i.imgur.com/avC1Xor.jpg'
+header-img: https://i.imgur.com/avC1Xor.jpg
 tags:
   - null
-thumbnail: 'https://i.imgur.com/H4qR4aa.png'
+thumbnail: https://i.imgur.com/H4qR4aa.png
 date: 2018-03-18
 ---
 
