@@ -20,7 +20,7 @@ Coveralls 소스코드의 커러지를 측정 해주는 도구입니다. Coveral
 
 ## Slack Web Hook 설정
 
-**Slack Web Hook 이미 한번 설정을 완료해서 스크린샷 화면이 조금 다를 수 있습니다.**
+**Incoming WebHooks 설정을 완료 하신경우 Coveralls 설정 으로 바로 넘어가시면 됩니다. Slack Web Hook 이미 한번 설정을 완료해서 스크린샷 화면이 조금 다를 수 있습니다.**
 ![](https://i.imgur.com/78QivsI.png)
 Slack Apps 페이지에서 **Incoming WebHooks** 를 설치합니다.
 
@@ -48,12 +48,4 @@ Webhook URL 값을 확인할 수 있습니다. 이 Webhook URL 값으로 Coveral
 ![](https://i.imgur.com/sHagJxo.png)
 
 **설정을 완료하면 Travis CI 에서 배포 작업이 진행이 완료되면 Slack에서 Coveralls 에대한 리포팅 메세지가 자동으로 오게 됩니다.**
-
-
-
-
-
-
-
-
 
