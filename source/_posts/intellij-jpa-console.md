@@ -9,7 +9,6 @@ tags:
   - JPA
   - JPA Console
 date: 2018-01-23 01:30:46
-header-img:
 ---
 
 
