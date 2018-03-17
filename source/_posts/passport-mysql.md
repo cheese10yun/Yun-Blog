@@ -3,6 +3,7 @@ layout: post
 title: Node Passport를 이용한 Login + Mysql
 date: 2017-01-07
 catalog: true
+header-img: https://i.imgur.com/avC1Xor.jpg
 tags: 
 - Node
 - Passport

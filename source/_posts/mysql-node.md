@@ -3,7 +3,8 @@ layout: post
 title: Node.JS + Mysql 연동
 date: 2017-01-05
 catalog: true
-tags: 
+header-img: https://i.imgur.com/avC1Xor.jpg
+tags:
 - Node
 - Mysql
 ---

@@ -3,6 +3,7 @@ layout: post
 title: PM2 이용한 Node 프로세스 관리
 date: 2016-12-20
 catalog: true
+header-img: https://i.imgur.com/avC1Xor.jpg
 tags: 
 - Node
 - PM2

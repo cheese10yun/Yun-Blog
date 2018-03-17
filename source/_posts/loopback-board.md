@@ -4,6 +4,7 @@ title: "Loopback 게시판 만들기 (1)"
 date: 2017-05-27
 catalog: true
 subtitle: "초간단 게시판 만들기"
+header-img: https://i.imgur.com/avC1Xor.jpg
 tags:
 - LoopBack
 - Node

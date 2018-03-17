@@ -2,7 +2,8 @@
 layout: post
 title: Node Mysql Multiple Insert
 date: 2017-01-31
-tags: 
+header-img: https://i.imgur.com/avC1Xor.jpg
+tags:
 - Node
 - Mysql
 - Multiple Insert

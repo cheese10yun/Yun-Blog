@@ -4,7 +4,7 @@ title: 인텔리제이로 Builder Pattern 쉽게 구현하기
 catalog: true
 date: 2018-01-18 01:25:21
 subtitle:
-header-img:
+header-img: https://i.imgur.com/avC1Xor.jpg
 tags:
 - IntelliJ
 - Builder Pattern

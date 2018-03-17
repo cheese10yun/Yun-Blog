@@ -3,7 +3,8 @@ layout: post
 title: AWS EC2 Nginx Node.js 설정
 date: 2016-12-13
 catalog: true
-tags: 
+header-img: https://i.imgur.com/avC1Xor.jpg
+tags:
 - Nginx
 - Node 
 - AWS

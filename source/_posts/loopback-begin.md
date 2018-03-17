@@ -3,7 +3,8 @@ layout: post
 title: Loopback 시작하기
 catalog: true
 date: 2017-05-05
-tags: 
+header-img: https://i.imgur.com/avC1Xor.jpg
+tags:
 - LoopBack
 - Node
 - JavaScript

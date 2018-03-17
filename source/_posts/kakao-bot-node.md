@@ -3,6 +3,7 @@ layout: post
 title: Node.JS로 카카오봇 만들기
 catalog: true
 date: 2017-02-16
+header-img: https://i.imgur.com/avC1Xor.jpg
 tags: 
 - Kakao 
 - Bot

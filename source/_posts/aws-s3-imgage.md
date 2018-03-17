@@ -1,6 +1,7 @@
 ---
 layout: post
 title: AWS S3 업로드시 이미지 최적화
+header-img: https://i.imgur.com/avC1Xor.jpg
 date: 2017-03-04
 tags: 
 - Node

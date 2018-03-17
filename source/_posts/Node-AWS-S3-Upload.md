@@ -3,7 +3,8 @@ layout: post
 title: Node AWS S3 업로드
 date: 2017-02-08
 catalog: true
-tags: 
+header-img: https://i.imgur.com/avC1Xor.jpg
+tags:
 - Node
 - imagemin
 - AWS

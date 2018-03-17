@@ -3,6 +3,7 @@ layout: post
 title: Passport를 이용한 네이버, 카카오, 페이스북 로그인
 date: 2017-01-21
 catalog: true
+header-img: https://i.imgur.com/avC1Xor.jpg
 tags: 
  - Node
  - Passport

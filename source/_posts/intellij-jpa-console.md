@@ -3,6 +3,7 @@ layout: post
 title: 인텔리제이 JPA Console
 subtitle: JPA Console
 catalog: true
+header-img: https://i.imgur.com/avC1Xor.jpg
 tags:
   - IntelliJ
   - JPA

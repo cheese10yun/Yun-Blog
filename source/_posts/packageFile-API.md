@@ -4,7 +4,7 @@ title: Package.json 파일로 API 버전 설정
 date: 2017-10-14 01:31:24
 subtitle:
 catalog: true
-header-img:
+header-img: https://i.imgur.com/avC1Xor.jpg
 thumbnail: https://i.imgur.com/cNL3e5B.png
 tags:
 - Node
