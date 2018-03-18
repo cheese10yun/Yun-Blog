@@ -1,6 +1,6 @@
 ---
 layout: post
-title: IntelliJ Live Template
+title: 인텔리제이 Live Template
 subtitle: IntelliJ Tip
 catalog: true
 header-img: https://i.imgur.com/avC1Xor.jpg

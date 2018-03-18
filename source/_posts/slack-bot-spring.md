@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spring 으로 초간단 Slack Bot 만들기
-subtitle: Slack Boot
+subtitle: Slack Bot
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
@@ -37,6 +37,7 @@ Incoming WebHooks 작업이 완료 됬다고 가정하고 포스팅을 진행하
 #### 이미지
 ![](https://i.imgur.com/W6Gg0eV.png)
 
+#### Curl
 ```
 curl -X POST \
   http://localhost:8080/bot/basic \
