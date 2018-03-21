@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Spring 으로 초간단 Slack Bot 만들기
-subtitle: Slack Bot
+title: Spring 으로 초간단 Slack Message 보내기
+subtitle: Slack Message
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
@@ -17,7 +17,7 @@ thumbnail:
 
 **[프로젝트 소스](https://github.com/cheese10yun/slackbot)**
 
-Spring boot 으로 초간단하게 Slack Boot 을 만들어 보는 프로젝트입니다. 현재는 별다른 기능은 없고 정말 단순하게 메세지 보내는 기능만 있습니다. [branch : release-1](https://github.com/cheese10yun/slackbot/tree/release-1)에 최대한 가져다 Copy & Paste 하기 쉽게? 만들었습니다. (~~조금이라도 도움이 되셨다면 start 좀...~~) [Slack Message](https://api.slack.com/docs/messages/builder) 에서 제공하는 3 가지 메세지를 보내 보겠습니다. 포스팅 하단에 Curl로 실제 메세지를 보내 볼 수 있습니다.
+Spring boot 으로 초간단하게 Slack Message 보내기를 만들어 보는 프로젝트입니다. 현재는 별다른 기능은 없고 정말 단순하게 메세지 보내는 기능만 있습니다. [branch : release-1](https://github.com/cheese10yun/slackbot/tree/release-1)에 최대한 가져다 Copy & Paste 하기 쉽게? 만들었습니다. (~~조금이라도 도움이 되셨다면 start 좀...~~) [Slack Message](https://api.slack.com/docs/messages/builder) 에서 제공하는 3 가지 메세지를 보내 보겠습니다. 포스팅 하단에 Curl로 실제 메세지를 보내 볼 수 있습니다.
 
 앞으로는 프로젝트 특정 시나리오에서 Exception 발생 했을 경우 Slack 으로 에러 메세지가 오게 설정하는 등 다양한 에러 메세지를 Slack 통해서 받아 볼 수 있게 할 예정입니다.
 
@@ -142,7 +142,7 @@ curl -X POST \
 }'
 ```
 
-## Bot 만들기
+## Slack Message 만들기
 
 ### Web Hook 연결
 
@@ -248,4 +248,4 @@ public boolean send(SlackTargetEnum target, Object object) {
 
 ## 마무리
 
-**포스팅 내용을 대충 보시고 실제 코드를 보시는 게 더 빨리 이해하실 수 있을 거 같습니다.** 최대한 간단하게 만들어서 처음 슬랙 봇을 만드시는 분이 편하게 가져다 쓰기 쉽게 만들어 봤습니다. 해당 프로젝트는 에러 발생시 Slack으로 메세징 받게 이어 나갈거 같습니다. Slack-Bot 프로젝트로 다시 찾아 뵙겠습니다.
+**포스팅 내용을 대충 보시고 실제 코드를 보시는 게 더 빨리 이해하실 수 있을 거 같습니다.** 최대한 간단하게 만들어서 처음 슬랙 봇을 만드시는 분이 편하게 가져다 쓰기 쉽게 만들어 봤습니다. 해당 프로젝트는 에러 발생시 Slack으로 메세징 받게 이어 나갈거 같습니다. Slack-Message 프로젝트로 다시 찾아 뵙겠습니다.
