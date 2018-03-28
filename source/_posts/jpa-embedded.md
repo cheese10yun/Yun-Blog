@@ -3,13 +3,13 @@ layout: post
 title: JPA-Embedded
 subtitle: JPA-Tip
 catalog: true
-header-img: 'https://i.imgur.com/avC1Xor.jpg'
-tags:
-  - null
-date: 2018-03-29 01:26:15
+header-img: https://i.imgur.com/avC1Xor.jpg
 thumbnail:
+date: 2018-03-29
+tags:
+  - JPA
+  - Embedded
 ---
-
 
 ## Embedded Type
 
@@ -110,4 +110,3 @@ public class Sender {
 ```
 * 임베디드 타입에 정의한 매핑정보를 재정의 하려면 `@AttributeOverride`를 사용하면 됩니다.
 * 해당 칼럼은 `sender_city`, `sender_street`, `sender_zip_code` 으로 생성됩니다.
-
