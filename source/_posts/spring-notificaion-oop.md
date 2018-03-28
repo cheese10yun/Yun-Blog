@@ -17,7 +17,7 @@ tags:
 **해당 요구사항에 맞는 객체지향 프로그래밍을 진행하고 해당 코드를 SOLD 원칙에 맞게 제 나름대로 해석 해보았습니다. 아직 배우는 단계라 너무 부족합니다. 지적 사항을 댓글로 남겨주시면 정말로 감사하겠습니다.** 위사진은 해당 셈플코드의 간략한 클래스 다이어그램 입니다.
 
 ## 예제 코드
-![blog-sample ](https://github.com/cheese10yun/blog-sample/tree/master/notification)
+[blog-sample ](https://github.com/cheese10yun/blog-sample/tree/master/notification)
 
 ## 요구사항
 
