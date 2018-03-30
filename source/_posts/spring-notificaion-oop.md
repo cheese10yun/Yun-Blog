@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Spring OOP 프로그래밍 예제
-subtitle: 내가 해석한 SOLID
+title: Spring OOP 프로그래밍 예제(1)
+subtitle: 배송 완료 알림 - 내가 해석한 SOLID
 catalog: true
 header-img: https://i.imgur.com/avC1Xor.jpg
 thumbnail: https://i.imgur.com/PI6g3ku.png
-date:
+date: 2018-03-24
 tags:
   - Spring
   - OOP
