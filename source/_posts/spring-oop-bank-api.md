@@ -108,8 +108,37 @@ public static class Money {
 ## 요구사항 구현
 도메인도 작업이 어느정도 완료됬으니 요구사항에 필요한 기능을 개발해 보겠습니다.
 
-* BankOfAmericaApi.class : Bank Of America 은행사 API 호출을 담당하는 클래스입니다. 이 클래스를 통해서 KRW -> USD 환율 정보를 가져옵니다.
-* ShinhanApi.class : 신한 은행사 API 호출을 담당하는 클래스입니다. 이 클래스를 통해서 통해서  USD -> KRW 환율  정보를 가져옵니다.
+
+### BankOfAmericaApi
+```java
+public class BankOfAmericaApi {
+    public ApiCommonDto.ExchangeRate consumeExchangeRate() {
+
+        //실제 은행사 API 호출해서 환율 정보를 가져오는 코드가 작성 됩니다.
+        return ApiCommonDto.ExchangeRate.builder()
+                .rate(1059.999963)
+                .corridor("US_TO_KOR")
+                .corridor("BANK_OF_AMERICA")
+                .build();
+    }
+}
+```
+* Bank Of America 은행사 API 호출을 담당하는 클래스입니다. 이 클래스를 통해서 KRW -> USD 환율 정보를 가져옵니다.
+
+### ShinhanApi.class
+```java
+public class ShinhanApi {
+    public ApiCommonDto.ExchangeRate consumeExchangeRate() {
+        //실제 은행사 API 호출해서 환율 정보를 가져오는 코드가 작성 됩니다.
+        return ApiCommonDto.ExchangeRate.builder()
+                .rate(0.000943)
+                .corridor("KOR_TO_US")
+                .company("Shinhan")
+                .build();
+    }
+}
+```
+* 신한 은행사 API 호출을 담당하는 클래스입니다. 이 클래스를 통해서 통해서  USD -> KRW 환율  정보를 가져옵니다.
 
 
 ### ExchangeRate
