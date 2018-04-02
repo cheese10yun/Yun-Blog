@@ -142,7 +142,7 @@ public class ShinhanApi {
 
 
 ### ExchangeRate
-```
+```java
 public interface ExchangeRate {
     ApiCommonDto.ExchangeRate getExchangeRate(CalculatorDto.Transaction transaction);
 }
