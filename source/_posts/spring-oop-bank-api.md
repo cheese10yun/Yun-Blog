@@ -44,22 +44,22 @@ date: 2018-03-30 00:00:00
 ### Money
 ```java
 @Getter
-    public static class Money {
-        private double amount;
-        private Currency currency;
-        private Locale locale;
-        private String amountCurrencyFormat;
+public static class Money {
+    private double amount;
+    private Currency currency;
+    private Locale locale;
+    private String amountCurrencyFormat;
 
-        @Builder
-        public Money(double amount, Currency currency, Locale locale) {
-            this.amount = amount;
-            this.currency = currency;
-            this.locale = locale;
-            this.amountCurrencyFormat = formattingCurrency();
-        }
-        ...
-        ...
+    @Builder
+    public Money(double amount, Currency currency, Locale locale) {
+        this.amount = amount;
+        this.currency = currency;
+        this.locale = locale;
+        this.amountCurrencyFormat = formattingCurrency();
     }
+    ...
+    ...
+}
 ```
 * 공통 키워드를 만족시키는 클래스를 작성 헸습니다.
     - 받는 **금액** : `amount`, 받는 금액의 **통화** : `currency`,  받는**나라** : `locale`
@@ -173,7 +173,8 @@ public class BankOfAmericaExchangeRate implements ExchangeRate {
 ```
 * ShinhanApi, BankOfAmericaApi 클래스를 이용해서 환율 정보를 가져옵니다.(실제 인행사를 호출하는 코드가 아닙니다. 그냥 하드코딩된 값을 리턴합니다.)
 * ExchangeRate 인터페이스를 구현하고 있습니다. 이 것을 통해서 IoC 효과를 갖을 수 있습니다.
-* **처음에는 BankOfAmericaApi, ShinhanApi 클래스들을 인터페이스를 통해서 묶으려고 했습니다. 하지만 그것은 잘못된 설계라고 생각합니다. 객체는 자율적인 책임을 가져야 하는데 인터페이스로 묶으면 객체들의 자율적인 책임을 방해하게됩니다. 또 한 인터페이스의 추상화 메소드로 인해서 리턴해야할 값과 메게변수로 값이 고정됩니다. 이렇게 고정 되면 은행사마다 API 호출 시 인증에 필요한 값, 넘겨야 할 데이터 등등 이 다를 수 밖에 없는데 이것을 추상화 시킨다는 것 자체가 바람직하지 않습니다.  물론 두 API를 만족하게 하기 위해서 모든 값을 갖는 리턴형, 매게변수를 갖게 하여 해결할 수는 있지만, 이것은 전혀 바람직하지 않은 설계라고 생각합니다. 다른 은행사의 API가 추가되면 또 그때 추상화가 다시 요구 됩니다.**
+* **처음에는 BankOfAmericaApi, ShinhanApi 클래스들을 인터페이스를 통해서 묶으려고 했습니다. 하지만 그것은 잘못된 설계라고 생각합니다. 객체는 자율적인 책임을 져야 하는데 인터페이스로 묶으면 객체들의 자율적인 책임을 방해하게 됩니다. 그 이유는 인터페이스의 추상화 메소드로 인해서 리턴해야할 값과 메게변수로 값이 고정됩니다. 이렇게 고정되면 은행사마다 API 호출 시 인증에 필요한 값, 넘겨야 할 데이터 등등 이 다를 수밖에 없는데 이것을 추상화시킨다는 것 자체가 바람직하지 않습니다. 예를 들어 다른 은행사의 API가 추가되면 또 그때 추상화(리턴 타입의 변경, 매개변수 변경)가 다시 요구됩니다.**
+
 
 
 ## Calculator
