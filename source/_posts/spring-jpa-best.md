@@ -14,7 +14,7 @@ thumbnail:
 
 
 ## Step-01
-Spring Boot + JPA를 활용한 Account 생성, 조회, 수정 API를 간단하게 만드는 예제입니다. 해당 코드는 [spring-jpa](https://github.com/cheese10yun/spring-jpa)를 확인해주세요.
+Spring Boot + JPA를 활용한 Account 생성, 조회, 수정 API를 간단하게 만드는 예제입니다. 해당 코드는 [Github](https://github.com/cheese10yun/spring-jpa)를 확인해주세요.
 
 ## 중요 포인트
 * 도메인 클래스 작성
