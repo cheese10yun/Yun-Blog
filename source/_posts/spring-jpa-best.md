@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Spring-Jpa Best Practices
-subtitle: Step-01
+title: Spring-Jpa Best Practices Step-01
+subtitle: Account 생성, 조회, 수정 API를 간단하게 만드는 예제
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
