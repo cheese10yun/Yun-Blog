@@ -14,7 +14,7 @@ tags:
 catalog: true
 ---
 ***AWS S3 이미지 업로드시 이미지 최적화를 진행하고 업로드하는 것이 브라우저에서의 속도가 크게 도움이 됩니다.*** `formidable` 업로드 , `AWS-S3` 업로드는 이 전 포스팅에서 한번 다뤘기 때문에 간단하게 설명하고 이미지 최적화 적업에 대해서 자세히 포스팅하겠습니다.
-***[Github](https://github.com/cheese10yun/AWS_S3_Image_Optimization_)클릭해서 전체 소스를 보시는 것을 권장합니다.***
+***[Github](https://github.com/cheese10yun/node-aws-s3-Image-optimization)클릭해서 전체 소스를 보시는 것을 권장합니다.***
 
 ## 작업순서
 1. `formidable` 모듈로 이미지 업로드 진행
