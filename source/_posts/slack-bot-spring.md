@@ -15,7 +15,7 @@ thumbnail:
 
 ## 프로젝트 설명
 
-**[프로젝트 소스](https://github.com/cheese10yun/slackbot)**
+**[프로젝트 소스](https://github.com/cheese10yun/spring-boot-slack-notificaion)**
 
 Spring boot 으로 초간단하게 Slack Message 보내기를 만들어 보는 프로젝트입니다. 현재는 별다른 기능은 없고 정말 단순하게 메세지 보내는 기능만 있습니다. [branch : release-1](https://github.com/cheese10yun/slackbot/tree/release-1)에 최대한 가져다 Copy & Paste 하기 쉽게? 만들었습니다. (~~조금이라도 도움이 되셨다면 start 좀...~~) [Slack Message](https://api.slack.com/docs/messages/builder) 에서 제공하는 3 가지 메세지를 보내 보겠습니다. 포스팅 하단에 Curl로 실제 메세지를 보내 볼 수 있습니다.
 
