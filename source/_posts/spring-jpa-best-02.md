@@ -8,7 +8,7 @@ tags:
   - Spring
   - JPA
   - Best Practices
-date: 2018-04-28 03:51:10
+date: 2018-05-02
 thumbnail:
 ---
 
