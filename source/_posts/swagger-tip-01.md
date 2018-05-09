@@ -29,13 +29,18 @@ public class SwaggerConfig {
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
                 .build()
-                .directModelSubstitute(Timestamp.class, Date.class);
+                .directModelSubstitute(Timestamp.class, Long.class);
 
     }
 }
 ```
 
-directModelSubstitute 메소드에서 추가시킬 Date 관련 클래스를 입력해주기만 하면 완료 됩니다.
+directModelSubstitute 메소드는 다음과 같이 작용합니다. 변경하고 싶은 클래스, 변경되고자 하는 포멧팅 입니다.
+저같은 경우는 long 타입의 클래스로 날짜를 출력하니 `directModelSubstitute(Timestamp.class, Long.class);`를 적용했습니다.
+
+
+
+
 
 ![](https://i.imgur.com/THkaEN6.png)
 
