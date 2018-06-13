@@ -102,7 +102,7 @@ public static class ExtendableBean {
 ```json
 {
   "id": 1,
-  "name": "My bean"
+  "name": "My bean"å
 }
 ```
 ```java
