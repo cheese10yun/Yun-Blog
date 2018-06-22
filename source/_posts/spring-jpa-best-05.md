@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring-Jpa Best Practices Step-05
+title: Spring-Jpa Best Practices Step-05 : OneToMany 관계 설정 팁
 subtitle: OneToMany 관계 설정 팁
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'

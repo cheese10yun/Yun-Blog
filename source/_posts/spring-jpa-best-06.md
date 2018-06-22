@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring-Jpa Best Practices Step-06
+title: Spring-Jpa Best Practices Step-06 : Setter 사용하지 않기
 subtitle: Setter 사용하지 않기
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'

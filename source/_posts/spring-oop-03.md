@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring OOP 프로그래밍 예제(3)
+title: Spring OOP 프로그래밍 예제(3) : 파트너 API
 subtitle: 파트너 API
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring-Jpa Best Practices Step-04
+title: Spring-Jpa Best Practices Step-04 : Embedded를 이용한 Password 처리
 subtitle: Embedded를 이용한 Password 처리
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'

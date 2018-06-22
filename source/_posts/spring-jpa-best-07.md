@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring-Jpa Best Practices Step-07
+title: Spring-Jpa Best Practices Step-07 : Embedded를 적극 활용
 subtitle: Embedded를 적극 활용
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
