@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring-Jpa Best Practices Step-03 : 효과적인 validate, 예외 처리 (2)
+title: Spring-Jpa Best Practices Step-03 - 효과적인 validate, 예외 처리 (2)
 subtitle: '효과적인 validate, 예외 처리 (2)'
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'

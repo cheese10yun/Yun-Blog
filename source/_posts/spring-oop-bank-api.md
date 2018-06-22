@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring OOP 프로그래밍 예제(2) : 은행 API를 통한 환율 계산기
+title: Spring OOP 프로그래밍 예제(2) - 은행 API를 통한 환율 계산기
 subtitle: 은행 API를 통한 환율 계산기
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'

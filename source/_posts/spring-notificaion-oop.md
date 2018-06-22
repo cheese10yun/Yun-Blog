@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring OOP 프로그래밍 예제(1) : 배송 완료 알림
+title: Spring OOP 프로그래밍 예제(1) - 배송 완료 알림
 subtitle: 배송 완료 알림 - 내가 해석한 SOLID
 catalog: true
 header-img: https://i.imgur.com/avC1Xor.jpg
