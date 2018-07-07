@@ -15,6 +15,7 @@ thumbnail:
 예제 코드는 [Github : blog-sample](https://github.com/cheese10yun/blog-sample/tree/master/pagerduty)에 공개 되어 있습니다.
 
 
+# 외부 API(PagerDuty) 호출
 최근 외부 API를 통신하는 일들이 많이 있었고 최근 PagerDuty API 작업을 하면서 외부 API를 사용할 때 많은 시행착오와 고민을 나름 정리해 보았습니다.
 
 ## PagerDuty Request
@@ -48,34 +49,32 @@ thumbnail:
 
 ```java
 @Getter
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
-public static class Req {
+public static class Request {
     @JsonProperty("event_action")
-    private EventAction eventAction;
+    private final EventAction eventAction;
     @JsonProperty("routing_key")
-    private String routingKey = "routingKey...";
-    private Payload payload;
+    private final String routingKey = "routingKey...";
+    private final Payload payload;
 
     @Builder
-    public Req(EventAction eventAction, Payload payload) {
+    public Request(final EventAction eventAction, final Payload payload) {
         this.eventAction = eventAction;
         this.payload = payload;
     }
 }
 
 @Getter
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public static class Payload {
-    private String summary;
-    private String timestamp = ZonedDateTime.now().toOffsetDateTime().format(DateTimeFormatter.ISO_OFFSET_DATE_TIME);
-    private Severity severity;
-    private Group group;
-    private Source source;
+    private final String summary;
+    private final String timestamp = ZonedDateTime.now().toOffsetDateTime().format(DateTimeFormatter.ISO_OFFSET_DATE_TIME);
+    private final Severity severity;
+    private final Group group;
+    private final Source source;
     @JsonProperty("custom_details")
-    private Object customDetails;
+    private final Object customDetails;
 
     @Builder
-    public Payload(String summary, Severity severity, Group group, Source source, Object customDetails) {
+    public Payload(final String summary, final Severity severity, final Group group, final Source source, final Object customDetails) {
         this.summary = summary;
         this.severity = severity;
         this.group = group;
@@ -85,7 +84,6 @@ public static class Payload {
 }
 
 @Getter
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public static class Response {
     private String status;
     private String message;
@@ -96,7 +94,7 @@ public static class Response {
 ```
 
 ### Request, Response에 대한 DTO 클래스 생성
-위의 JSON을 클래스로 바인딩시킬 DTO 클래스를 생성해서 API에 대한 Request, Response를 관리하는 것이 바람직합니다. 간혹 Map, JSON(goon, jackson) 등을 이용해서 유연하게 두는 예도 있지만 **저는 개인적으로 권장하지 않습니다.** 가장 큰 이유는 해당 값에 무슨 데이터가 있는지 확인하기 어렵습니다. 코드 가독성이 심각하게 떨어지며 정확히 어떤 자료형인지 확인하기도 어렵습니다. 또 @JsonProperty를 통해서 해당 실제 JSON 키값과 객체의 멤버 필드 값을 다르게 설정 할 수 있습니다.
+위의 JSON을 클래스로 바인딩시킬 DTO 클래스를 생성해서 API에 대한 Request, Response를 관리하는 것이 바람직합니다. 간혹 Map, JSON(gsoon, jackson) 등을 이용해서 유연하게 두는 예도 있지만 **저는 개인적으로 권장하지 않습니다.** 가장 큰 이유는 해당 값에 무슨 데이터가 있는지 확인하기 어렵습니다. 코드 가독성이 심각하게 떨어지며 정확히 어떤 자료형인지 확인하기도 어렵습니다. 또 @JsonProperty를 통해서 해당 실제 JSON 키값과 객체의 멤버 필드 값을 다르게 설정 할 수 있습니다.
 
 ### Setter를 사용하지 않기
 이전 포스팅에서도 [Setter 사용하지 않기](https://github.com/cheese10yun/spring-jpa-best-practices/blob/master/doc/step-06.md)를 언급한 적이 있습니다. Response DTO 클래스 같은 경우는 더욱 Setter를 제공할 필요가 없지만, 관습적으로 Setter 메서드를 추가하는 경우가 많습니다. **해당 객체를 어디서든지 변경이 가능한 객체가 되기 때문에 명확한 이유 없이 관습적인 Setter는 반드시 지양 해야 합니다.**
@@ -147,7 +145,7 @@ public enum Severity {
     info, error, warn
 }
 ```
-String으로 관리할 경우 해당 값 이외의 입력에 대한 예외가 런타임시에 발생하게 됩니다. enum 클래스로 관리했을 경우 개발자는 해당 enum 값이 외에는 값을 넣을 수도 없게끔 강제하는 것이 실수를 줄이는 방법입니다. String은 변경 및 유지 보수에 취약합니다. 이처럼 API에서 강제된 항목들은 enum 클래스로 관리하는 것이 바람직합니다.
+String으로 관리할 경우 해당 값 이외의 입력에 대한 예외코드를 작성하면 런타임시에 발생하게 됩니다. enum 클래스로 관리했을 경우 개발자는 해당 enum 값이 외에는 값을 넣을 수도 없게끔 강제하는 것이 실수를 줄이는 방법입니다. String은 변경 및 유지 보수에 취약합니다. 이처럼 API에서 강제된 항목들은 enum 클래스로 관리하는 것이 바람직합니다.
 
 ## 각각의 메소드에 책임 부여
 
@@ -190,7 +188,6 @@ private PagerDutyDto.Response send(final PagerDutyDto.Request request) {
 sendErrorMessage() 메소드는 적절하게 Error Message를 만들어서 send 메소드에게 전달해주는 것이 그 함수가 하는 일입니다. 함수의 크기가 작으며 적은 일을 수행하고 있습니다.
 
 send() 메소드도 넘겨받은 request값을 PagerDutry API 에게 요청하고 그에 따른 응답값을 받는 일만 합니다. 그렇게 된 결과 sendInfoMessage() 메서드에서도 재사용성이 높아지고, 해당 함수가 하는 일이 단순해져서 가독성이 높아집니다. 또 위에서도 언급했듯이 PagerDuty API 변경시에만 해당 메소드가 변경됩니다. 그런 결과 유지 보수하기 편한 이점이 있다고 생각합니다.
-
 
 
 
