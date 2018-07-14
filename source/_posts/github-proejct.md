@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Github로 프로젝트 관리하기
+title: Github로 프로젝트 관리하기 Part1
 subtitle: Part1 - 이슈 발급 부터 코드리뷰까지
 catalog: true
 header-img: 'https://i.imgur.com/vpKKHrD.jpg'
