@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Github로 프로젝트 관리하기 Part2
-subtitle: Part2 - CI & Test Coverage
+subtitle: Part2 - CI & Test Coverage & Wiki
 catalog: true
 header-img: 'https://i.imgur.com/vpKKHrD.jpg'
 tags:
@@ -11,7 +11,7 @@ tags:
 date: 2018-07-14 00:00:00
 ---
 
-
+# CI & Test Coverage
 ![](https://i.imgur.com/G5jo0Ty.png)
 
 [GitHub Marketplace](https://github.com/marketplace/category/continuous-integration) Public Repository를 이용하면 대부분 무료로 이용 가능합니다. **본 포스팅에서는  CI는 Travis CI, Test Coverage는 Coveralls를 이용해서 진행하겠습니다.**
@@ -37,3 +37,17 @@ date: 2018-07-14 00:00:00
 위에서 Merge pull request를 통해서 해당 작업(issue)을 반영했다면 Travis가 Build 할 때 작성된 Test Code 기반으로 Coverage 정보를 위처럼 자동으로 코멘드를 추가해줍니다.
 
 누군가가 테스트 코드를 작성하지 않았다면 `Change from base` 항목에서 - 표시가 됩니다. **이렇게 해당 작업마다 커버리지를 표시하는 것이 전체 커버리지를 높이고 그 값을 유지하는 좋은 방법이라고 생각합니다.**
+
+# Wiki
+GitHub에서는 기본적인 WIKI 기능을 제공해줍니다. 
+
+## Wiki 등록
+![](https://github.com/cheese10yun/github/blob/master/images/wiki.gif?raw=true)
+
+## GitHub 작성
+![](https://i.imgur.com/t3LuQsm.png)
+GitHub에서 위키를 작성할 수 있습니다.
+
+## Local 작성
+![](https://i.imgur.com/Ff6Heeb.png)
+**위키를 로컬환경에서 작성해서 Push 할 수 있습니다. 이렇게 사용하시는 것을 추천 드립니다.**
