@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 'Spring OOP 프로그래밍 예제(4) - Service, ServiceImpl 구조'
-subtitle: 'Service, ServiceImpl 구조'
+title: 'Spring OOP 프로그래밍 예제(4) - Service, ServiceImpl 구조에 대한 고찰'
+subtitle: 'Service, ServiceImpl 구조에 대한 고찰'
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
@@ -10,13 +10,14 @@ tags:
 date: 2018-06-03 00:00:00
 thumbnail:
 ---
+# Service, ServiceImpl 구조에 대한 고찰
 
-
-예제 코드는 [Github : blog-sample](https://github.com/cheese10yun/blog-sample/tree/master/partner-api)에 공개 되어 있습니다.
+예제 코드는 [GitHub](https://github.com/cheese10yun/blog-sample/tree/master/service)에 공개 되어 있습니다.
 
 스프링을 처음 공부 할 때 많이 사용되는 Service, ServiceImpl 구조에 관해서 이야기 하려고 합니다. 저도 처음 Spring을 학습할 때 Service, ServiceImpl 구조를 그대로 타이핑하면서 학습을 하였지만, 굳이 이것을 통해서 장점을 얻지 못했기 때문에 실무에서나 개인적으로나 사용하지는 않았습니다.
 
 Service, ServiceImpl 구조의 장점을 찾으려고 해도 명확한 답변보다는 교과서적인 답변밖에 찾지를 못했습니다. 최근에 객체지향 프로그래밍을 학습하면서 Service, ServiceImpl 구조를 한번 설명하고자 합니다. **어디까지나 저의 부족한 개념을 통한 정리이기에 때문에 비판적인 시각으로 읽어주시면 감사하겠습니다. 또 여러분들도 자신만의 정의를 내려보는 것도 좋을 거 같습니다.**
+
 
 
 결론부터 말씀드리면 Service, ServiceImpl는 좋은 구조라고 생각하지 않습니다. 특히 도메인 객체에는 더욱더 좋지 않다고 생각합니다.
@@ -161,9 +162,9 @@ public interface CardPaymentService {
 ![](http://woowabros.github.io/img/2016-08-03/tray.png)
 
 >출처 « 로버트 C.마틴 - Clean Code 177page »
- 작은 클래스가 많은 시스템이든 큰 클래스가 몇 개뿐인 시스템이든 돌아가는 부품은 그 수가 비슷하다.
- (중략)
- “도구 상자를 어떻게 관리하고 싶은가? 작은 서랍을 많이 두고 기능과 이름을 명확한 컴포넌트를 나눠 넣고 싶은가? 아니면 큰 서랍 몇 개를 두고 모두를 던져 넣고 싶은가?”
+>
+>작은 클래스가 많은 시스템이든 큰 클래스가 몇 개뿐인 시스템이든 돌아가는 부품은 그 수가 비슷하다. (중략) 
+> “도구 상자를 어떻게 관리하고 싶은가? 작은 서랍을 많이 두고 기능과 이름을 명확한 컴포넌트를 나눠 넣고 싶은가? 아니면 큰 서랍 몇 개를 두고 모두를 던져 넣고 싶은가?”
 
 [인용 문구, 사진 - 우아한 형제들 기술 블로그 :첫 Java 프로젝트의 생생한 후기](http://woowabros.github.io/experience/2016/08/02/first_java_project.html)
 
