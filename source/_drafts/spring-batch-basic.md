@@ -9,7 +9,7 @@ tags:
 date: 2018-11-20 01:12:00
 ---
 
-스프링 배치는 벡엔드의 배치처리 기능을 구현하는 데 사용하는 프레임워크입니다. 스프링 부트 배치는 스프링 배치 설정 요소들을 간편화시켜 스프링 배치를 빠르게 설정하는 데 도움을 줍니다. * [처음으로 배우는 스프링 부트 2](https://kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9791162241264&orderClick=JAj)를 정리한 글입니다. 책에 더 자세한 내용이 정리되어 있으니 꼭 책을 읽어 보는 것을 추천드립니다.
+스프링 배치는 벡엔드의 배치처리 기능을 구현하는 데 사용하는 프레임워크입니다. **스프링 부트 배치는 스프링 배치 설정 요소들을 간편화시켜 스프링 배치를 빠르게 설정하는 데 도움을 줍니다. [처음으로 배우는 스프링 부트 2](https://kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9791162241264&orderClick=JAj)를 정리한 글입니다. 책에 더 자세한 내용이 정리되어 있으니 꼭 책을 읽어 보는 것을 추천드립니다.**
 
 **해당 코드는 [Github](https://github.com/cheese10yun/blog-sample/tree/master/batch-demo)를 확인해주세요.**
 
