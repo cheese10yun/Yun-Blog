@@ -11,7 +11,7 @@ thumbnail:
 ---
 
 
-**해당 코드는 [Github](https://github.com/cheese10yun/blog-sample/tree/master/lombok)에 공개되어 있습니.**
+**해당 코드는 [Github](https://github.com/cheese10yun/blog-sample/tree/master/lombok)에 공개되어 있습니다.**
 
 Lombok은 자바 컴파일 시점에서 특정 어노테이션으로 해당 코드를 추가할 수 있는 라이브러리입니디. 이는 코드의 다이어트? 가독 성 및 유지 보수에 많은 도움이 됩니다. **하지만 편리한 만큼 잘못 사용하기 쉬운 것이 Lombok 입니다.** 
 
