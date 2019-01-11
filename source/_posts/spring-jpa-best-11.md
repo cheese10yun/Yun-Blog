@@ -79,7 +79,7 @@ server:
 * `profiles.active` 속성에 원하는 정보 env를 작성합니다.
 
 ### IntelliJ에서 설정 하는 방법
-![](../images/intellij-properties.png)
+![](https://github.com/cheese10yun/spring-jpa-best-practices/raw/master/images/intellij-properties.png)
 
 IntelliJ에서는 외부에서 넘겨 받는 인자로 다양한 환경 설정을 제공해줍니다. 가장 대표적인 방법으로 VM options, Active profiles 설정이 있습니다. 아래의 방법중 하나를 선택하면 됩니다.
 
@@ -101,6 +101,6 @@ server:
 ```
 `application.yml`으로 설정해서 스프링을 구동시켜보겠습니다.
 
-![](../images/spring-profile.png)
+![](https://github.com/cheese10yun/spring-jpa-best-practices/raw/master/images/spring-profile.png)
 
 `application.yml`에서 설정한 local 환경설정이 동작하는 것을 확인할 수 있습니다.
