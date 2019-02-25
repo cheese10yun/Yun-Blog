@@ -17,20 +17,6 @@ thumbnail:
 # Exception Guide
 스프링은 예외처리를 위해 다양하고 막강한 어노테이션을 제공하고 있습니다. 일관성 있는 코드 스타일을 유지하면서 Exception을 처리하는 방법에 대해서 소개하겠습니다.
 
-# 목차
-- [Exception Guide](#exception-guide)
-- [목차](#%EB%AA%A9%EC%B0%A8)
-- [통일된 Error Response 객체](#%ED%86%B5%EC%9D%BC%EB%90%9C-error-response-%EA%B0%9D%EC%B2%B4)
-  - [Error Response JSON](#error-response-json)
-  - [Error Response 객체](#error-response-%EA%B0%9D%EC%B2%B4)
-- [@ControllerAdvice로 모든 예외를 핸들링](#controlleradvice%EB%A1%9C-%EB%AA%A8%EB%93%A0-%EC%98%88%EC%99%B8%EB%A5%BC-%ED%95%B8%EB%93%A4%EB%A7%81)
-- [Error Code 정의](#error-code-%EC%A0%95%EC%9D%98)
-- [Business Exception 처리](#business-exception-%EC%B2%98%EB%A6%AC)
-  - [비지니스 예외를 위한 최상위 BusinessException 클래스](#%EB%B9%84%EC%A7%80%EB%8B%88%EC%8A%A4-%EC%98%88%EC%99%B8%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%B5%9C%EC%83%81%EC%9C%84-businessexception-%ED%81%B4%EB%9E%98%EC%8A%A4)
-  - [Coupon Code](#coupon-code)
-- [컨트롤러 예외 처리](#%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC-%EC%98%88%EC%99%B8-%EC%B2%98%EB%A6%AC)
-  - [Controller](#controller)
-- [Try Catch 전략](#try-catch-%EC%A0%84%EB%9E%B5)
 
 # 통일된 Error Response 객체
 
@@ -303,6 +289,7 @@ public class DeviceController {
 ## 비지니스 예외를 위한 최상위 BusinessException 클래스
 
 ![](https://github.com/cheese10yun/spring-guide/raw/master/docs/imgs/BusinessException-final.png)
+
 
 최상위 BusinessException을 상속 받는 InvalidValueException, EntityNotFoundExceptuon 등이 있습니다.
 
