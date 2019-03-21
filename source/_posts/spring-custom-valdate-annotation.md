@@ -1,15 +1,16 @@
 ---
 layout: post
 title: Spring Custom Validate 어노테이션 만들기
-subtitle:
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
   - Validate
-date: 2019-03-22 00:30:00
+date: 2019-03-20 01:40:00
+subtitle:
 thumbnail:
 ---
+
 
 > 해당 코드는 [Github](https://github.com/cheese10yun/blog-sample/tree/master/custom-validation)를 확인해주세요.
 
