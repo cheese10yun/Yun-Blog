@@ -50,7 +50,6 @@ Member에 대한 조회 전용 서비스 객체인 `MemberFindSetvice`으로 네
 > 메서드(책임)란 것은 외부 객체의 호출에 대한 응답이고, 이러한 메서드(책임)들이 모여 클래스(역할)가되고 클래스(역할)는 인터페이스(대체 가능성)을 의미합니다.
 
 
-
 [Service, ServiceImpl 구조에 대한 고찰](https://github.com/cheese10yun/blog-sample/tree/master/service)에 대해서 포스팅 한 내용을 다시 한번 설명드리겠습니다. 
 
 
