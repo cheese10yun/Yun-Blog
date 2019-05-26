@@ -11,7 +11,7 @@ tags:
 thumbnail: 'https://i.imgur.com/6xFlHcv.png'
 date: 2019-02-23 19:10:00
 ---
-
+> (IntelliJ 사용법 Tip 전체 보기[https://github.com/cheese10yun/IntelliJ]
 
 # 특정 Import 제외하기
 
