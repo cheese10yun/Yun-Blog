@@ -35,7 +35,7 @@ Error는 시스템이 비정상적인 상황에서 발생하다. 이 수준의 E
 
 Checked, Unchecked은 개발자들이 만든 애플리케이션 코드에서 예외가 발생했을 경우에 사용하게 됩니다.
 
-위 상속 구조를 처럼 **Unchecked Exception는 RuntimeException을 상속하고 Checked Exception는 RuntimeException을 상속하지 않습니다.** 이것으로 두 **Exception을 구분할 구분하는 중요한 포인트입니다.**
+위 상속 구조를 처럼 **Unchecked Exception는 RuntimeException을 상속하고 Checked Exception는 RuntimeException을 상속하지 않습니다.** 이것으로 두 **Exception을 구분하는 중요한 포인트입니다.**
 
 
 
