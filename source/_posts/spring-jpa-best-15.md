@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring-JPA Best Practices step-15 - Querydsl를 이용해서 Repository 확장하기
+title: Spring-JPA Best Practices step-15 - Querydsl를 이용해서 Repository 확장하기 (1)
 subtitle: Querydsl를 이용해서 Repository 확장하기
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
