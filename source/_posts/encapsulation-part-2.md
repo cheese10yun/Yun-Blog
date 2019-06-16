@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 캡슐화 내가 생각하는 캡슐화란 (2)
+title: Spring OOP 프로그래밍 예제(6) - 캡슐화 내가 생각하는 캡슐화란(2)
 subtitle: 스프링 JPA로 알아보는 캡슐화
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
