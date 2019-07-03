@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 인텔리제이 Sprong Boot Run Gradle에게 위임하기
+title: 인텔리제이 Spring Boot Run Gradle에게 위임하기
 subtitle: IntelliJ Tip
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
