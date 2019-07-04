@@ -13,7 +13,7 @@ date: 2019-07-04 02:27:00
 
 **해당 코드는 [Github](https://github.com/cheese10yun/blog-sample/tree/master/actuator)에 공개되어 있습니다.**
 
-스프링은 Actuator를 이용해서 애플리케이션 상태를 종합적으로 모니터링할 수 있습니다. 
+스프링은 Actuator를 이용해서 애플리케이션 상태를 종합적으로 모니터링할 수 있습니다.
 
 ## 의존성 주입
 
@@ -37,7 +37,7 @@ management:
       exposure:
         include: "*"
 ```
-`application.yml` 설정을 변경하고 다시 `http://localhost:8890/actuator` 호출하면 아래 Repsonse와 같습니다.
+`application.yml` 설정을 변경하고 다시 `/actuator` 호출하면 아래 Response와 같습니다.
 
 ```json
 {
@@ -146,6 +146,39 @@ management:
           - "httptrace"
 ```
 
+`application.yml` 변경이후 다시 `/actuator`을 호출하면 `include`에 포함시킨 endpoint만 Response 받게 됩니다.
+
+```json
+{
+  "_links": {
+    "self": {
+      "href": "http://localhost:8890/actuator",
+      "templated": false
+    },
+    "health": {
+      "href": "http://localhost:8890/actuator/health",
+      "templated": false
+    },
+    "health-component": {
+      "href": "http://localhost:8890/actuator/health/{component}",
+      "templated": true
+    },
+    "health-component-instance": {
+      "href": "http://localhost:8890/actuator/health/{component}/{instance}",
+      "templated": true
+    },
+    "info": {
+      "href": "http://localhost:8890/actuator/info",
+      "templated": false
+    },
+    "httptrace": {
+      "href": "http://localhost:8890/actuator/httptrace",
+      "templated": false
+    }
+  }
+}
+```
+
 ## Info Git Info 노출하기
 기본 설정에서 `actuator/info` 호출 시애 아무 정보도 Response를 하지 않습니다. plugin을 이용하면 git에 대한 정보를 쉽게 노출할 수 있습니다.
 
@@ -159,14 +192,14 @@ buildscript {
 }
 apply plugin: "com.gorylenko.gradle-git-properties"
 ```
-필요한 디펜던시를 추가합니다. 
+필요한 디펜던시를 추가합니다.
 
 ```yml
 management:
   ...
   info:
     git:
-      mode: SIMPLE # FULL
+      mode: SIMPLE # FULL or SIMPLE
 ```
 git 정보에 대한 mode를 SMPLE, FULL을 지정할 수 있습니다. 이후에 서버를 실행시키면 아래 그림처럼 `git.properties` 파일에 Git에 대한 정보가 담겨있습니다.
 
@@ -312,7 +345,7 @@ Run/Debug Tab에서 Endpoints에서는 전체 Request Mapping를 볼 수 있습�
 
 ![](https://github.com/cheese10yun/blog-sample/raw/master/actuator/images/endpoints-heath.png)
 
-`Health` Tab에서는 위에서 확인한 heath 정보도 확인할 수 있습니다. Http 요청을 보내서 확인하는 것보다는 IntelliJ 확인하는 것이 개인적으로는 편리한 거 같습니다.
+`Health` Tab에서는 위에서 확인한 heath 정보도 확인할 수 있습니다. Http 요청을 보내서 확인하는 것보다는 인텔리 제이에서 확인하는 것이 개인적으로는 편리한 거 같습니다.
 
 ![](https://github.com/cheese10yun/blog-sample/raw/master/actuator/images/intellij-api-call.gif)
 
