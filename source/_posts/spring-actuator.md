@@ -312,7 +312,7 @@ Run/Debug Tab에서 Endpoints에서는 전체 Request Mapping를 볼 수 있습�
 
 ![](https://github.com/cheese10yun/blog-sample/raw/master/actuator/images/endpoints-heath.png)
 
-`Health` Tab에서는 위에서 확인한 heath 정보도 확인할 수 있습니다. Http 요청을 보내서 확인하는 것보다는 인텔리 제이에서 확인하는 것이 개인적으로는 편리한 거 같습니다.
+`Health` Tab에서는 위에서 확인한 heath 정보도 확인할 수 있습니다. Http 요청을 보내서 확인하는 것보다는 IntelliJ 확인하는 것이 개인적으로는 편리한 거 같습니다.
 
 ![](https://github.com/cheese10yun/blog-sample/raw/master/actuator/images/intellij-api-call.gif)
 
