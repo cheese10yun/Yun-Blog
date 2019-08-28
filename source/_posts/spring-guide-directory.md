@@ -126,7 +126,7 @@ thumbnail:
     │   │               ├── global
     │   │               │   ├── common
     │   │               │   │   ├── request
-    │   │               │   │   └── resonse
+    │   │               │   │   └── response
     │   │               │   ├── config
     │   │               │   │   ├── SwaggerConfig.java
     │   │               │   │   ├── properties
@@ -212,7 +212,7 @@ repository 와 비슷합니다. repository로 하지 않은 이유는 조회 전
 ├── global
 │   ├── common
 │   │   ├── request
-│   │   └── resonse
+│   │   └── response
 │   │       └── Existence.java
 │   ├── config
 │   │   ├── SwaggerConfig.java
