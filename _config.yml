@@ -205,3 +205,9 @@ deploy:
   type: git
   repository: git@github.com:cheese10yun/cheese10yun.github.io.git
   branch: master
+
+utterances:
+  enable: true
+  repo: cheese10yun/blog-comment
+  issue_term: title
+  theme: github-light
