@@ -125,7 +125,7 @@ public class MemberApiTest extends IntegrationTest {
     ...
 }
 ```
-* `IntegrationTest` 클래스를 상속받습니다. 이 상속을 통해서 MemberApiTest에서 테스트를 위한 어 로테이션이 생략되며 어떤 통합 테스트라도 항상 통일성을 가질 수 있습니다.
+* `IntegrationTest` 클래스를 상속받습니다. 이 상속을 통해서 MemberApiTest에서 테스트를 위한 어노테이션이 생략되며 어떤 통합 테스트라도 항상 통일성을 가질 수 있습니다.
 * `given`, `when`, `then` 키워드로 테스트 흐름을 알려줍니다. 다른 사람의 테스트 코드의 가독성이 높아지기 때문에 해당 키워드로 적절하게 표시하는 것을 권장합니다.
 * 요청에 대한 메서드를 `requestSignUp(...)`으로 분리해서 재사용성을 높입니다. 해당 메서드로 valdate 실패하는 케이스도 작성합니다 `andDo(print())` 메서드를 추가해서 해당 요청에 대한 출력을 확인합니다. 디버깅에 매우 유용합니다.
 * 모든 response에 대한 `andExpect`를 작성합니다. 간혹 `.andExpect(content().string(containsString("")))` 이런 테스트를 진행하는데 특정 문자열이 들어 있는지 없는지 확인하는 것은 것보다 모
