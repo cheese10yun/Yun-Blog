@@ -76,7 +76,7 @@ public class Account {
 기본적으로 `setter` 메서드가 모든 멤버 필드에 대해서 없고 생성자를 이용한 Builder Pattern 메서드에도 생성, 수정 날짜를 제외해 `@CreationTimestamp`, `@UpdateTimestamp` 어노테이션을 이용해서 VM시간 기준으로 날짜가 자동으로 입력하게 하거나 데이터베이스에서 자동으로 입력하게 설정하는 편이 좋습니다. 매번 생성할 때 create 시간을 넣어 주고, update 할 때 넣어 주고 반복적인 작업과 실수를 줄일 수 있는 효과적인 방법이라고 생각합니다.
 
 ### 객체 생성 제약
-`@NoArgsConstructor(access = AccessLevel.PROTECTED)` lombok 어노테이션을 통해서 객체의 직접생성을 외부에서 못하게 설정하였습니다. 그래서  `@Builder` 에노티이션이 설정돼 있는 `Account` 생성자 메소드를 통해서 해당 객체를 생성할 수 있습니다. 이렇게 빌더 패턴을 이용해서 객체 생성을 강요하면 다음과 같은 장점이 있습니다. ( Account 생성자의 모든 인자값을 넣어주면 생성은 가능합니다.)
+`@NoArgsConstructor(access = AccessLevel.PROTECTED)` lombok 어노테이션을 통해서 객체의 직접생성을 외부에서 못하게 설정하였습니다. 그래서  `@Builder` 애노테이션이 설정돼 있는 `Account` 생성자 메소드를 통해서 해당 객체를 생성할 수 있습니다. 이렇게 빌더 패턴을 이용해서 객체 생성을 강요하면 다음과 같은 장점이 있습니다. ( Account 생성자의 모든 인자값을 넣어주면 생성은 가능합니다.)
 
 #### 객체를 유연하게 생성할 수 있습니다.
 ```java
