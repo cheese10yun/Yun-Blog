@@ -54,7 +54,7 @@ where m.id in (1, 2, 33)
 id는 SELECT에 붙은 번호를 말한다. MySQL은 조인을 하나의 단위로 실행하기 때문에 id는 그 쿼리에 실행 단위를 식별하는 것이다. 따라서 조인만 수행하는 쿼리에서는 id는 항상 1이 된다.
 
 ### select_type
-select_type은 항상 SIMPLE 이된다. 복잡한 조인을 해도 SIMPLE이 된다. 서브뤄리나 UNION이 있으면 id와 select_type이 변한다.
+select_type은 항상 SIMPLE 이된다. 복잡한 조인을 해도 SIMPLE이 된다. 서브쿼리나 UNION이 있으면 id와 select_type이 변한다.
 
 ### partitions
 partitions는 파티셔닝이 되어 있는 경우에 사용되는 필드이다. 이 쿼리에서 사용된 테이블을 모두 파티셔닝이 되어 있지 않기 때문에 이 필드가 모두 NULL로 출력되았다. 파티셔닝 되어 있는 경우는 반드시 이 필드를 확인하자 
