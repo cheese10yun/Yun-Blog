@@ -3,11 +3,8 @@ layout: post
 title: 생산성 향상 - 비기는 없다
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
-tags:
-  - 생산성
 date: 2019-07-21 17:40:00
 subtitle:
-thumbnail:
 ---
 
 ## 들어가기 앞서
