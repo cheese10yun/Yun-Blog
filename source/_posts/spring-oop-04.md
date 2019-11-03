@@ -23,7 +23,7 @@ Service, ServiceImpl 구조의 장점을 찾으려고 해도 명확한 답변보
 결론부터 말씀드리면 Service, ServiceImpl는 좋은 구조라고 생각하지 않습니다. 특히 도메인 객체에는 더욱더 좋지 않다고 생각합니다.
 
 ## MemberService
-``` java
+```java
 public interface MemberService {
 
     Member findById(MemberId id);

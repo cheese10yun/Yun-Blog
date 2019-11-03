@@ -31,7 +31,7 @@ internal fun `isBlank `(value: String) {
 internal fun `ints values`(value: Int) {
     print("value: $value ") // value: 1 value: 2 value: 3 value: 4
 }
-``` 
+```
 Int, String 이 이외에도 기본형 데이터 타입을 지원하고 있습니다.
 
 
@@ -147,7 +147,7 @@ internal class MemberRepositoryTest(val memberRepository: MemberRepository) {
         assertThat(member.name).isEqualTo(name)
     }
 }
-``` 
+```
 
 ### DSL 지원
 ```kotlin
