@@ -146,10 +146,9 @@ internal class MemberRepositoryTest(val memberRepository: MemberRepository) {
         assertThat(member.name).isEqualTo(name)
     }
 }
-``` 
+```
 
 ### DSL 지원
-
 ```kotlin
 @SpringBootTest
 @TestConstructor(autowireMode = TestConstructor.AutowireMode.ALL)
