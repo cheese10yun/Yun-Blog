@@ -8,6 +8,7 @@ tags:
 date: 2019-11-20 00:00:00
 subtitle:
 ---
+**해당 코드는 [Github](https://github.com/cheese10yun/blog-sample/tree/master/kotlin-junit5)에 공개되어 있습니다.**
 
 Spring Boot 2.2 버전에서부터는 Immutable으로 Properties 설정을 할 수 있습니다. 커스텀 하게 설정한 값들은 Properties 객체로 관리하는 것이 좋습니다. 해당 내용은 [Properties 설정값 가져오기](https://github.com/cheese10yun/spring-jpa-best-practices/blob/master/doc/step-10.md)를 참조하시면 됩니다. 기존 Properties의 단점은 Mutable이라는 점입니다. 아래 예제 코드에서 설명드리겠습니다.
 
