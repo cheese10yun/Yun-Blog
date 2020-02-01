@@ -170,3 +170,6 @@ findById() 같은 경우는 영속성 컨텍스트를 먼저 찾고 영속성 �
 ![](https://github.com/cheese10yun/blog-sample/raw/master/query-dsl/docs/images/team-name.png)
 
 신규 조회한 `team name` 제대로 변경된 것을 확인할 수 있습니다. 
+
+## 참고
+* [자바 ORM 표준 JPA 프로그래밍](http://acornpub.co.kr/book/jpa-programmig)
