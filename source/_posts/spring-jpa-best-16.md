@@ -116,7 +116,7 @@ public class AccountRepositoryTest {
 
 }
 ```
-Predicate 객체 생성을 통해서 쿼리메서드 코드 추가 없이 다양한 쿼리들을 쉽게 만들 수 있습니다.
+Predicate 객체 생성을 통해서 쿼리 메서드 코드 추가 없이 다양한 쿼리들을 쉽게 만들 수 있습니다.
 
 ![](https://github.com/cheese10yun/spring-jpa-best-practices/raw/master/images/test-result.png)
 

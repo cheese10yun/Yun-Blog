@@ -118,7 +118,7 @@ public class AccountRepositoryTest {
     }
 }
 ```
-`findByEmail_test`, `isExistedEmail_test` 테스트는 `AccountRepository`에 작성된 쿼리메서드 테스트입니다. 
+`findByEmail_test`, `isExistedEmail_test` 테스트는 `AccountRepository`에 작성된 쿼리 메서드 테스트입니다. 
 
 중요한 부분은 `findRecentlyRegistered_test` 으로 `AccountCustomRepository`에서 정의된 메서드이지만 `accountRepository`를 이용해서 호출하고 있습니다. 
 
