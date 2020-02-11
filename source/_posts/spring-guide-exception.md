@@ -184,10 +184,10 @@ public class GlobalExceptionHandler {
   * 그 밖에 발생하는 모든 예외 처리, Null Point Exception, 등등
   * 개발자가 직접 핸들링해서 다른 예외로 던지지 않으면 모두 이곳으로 모인다.
 * handleBusinessException
-  * 비지니스 요규사항에 따른 Exception
+  * 비즈니스 요규사항에 따른 Exception
   * 아래에서 자세한 설명 진행
 
-추가로 스프링 및 라이브러리 등 자체적으로 발생하는 예외는 `@ExceptionHandler` 으로 추가해서 적절한 Error Response를 만들고 **비지니스 요구사항에 예외일 경우 `BusinessException` 으로 통일성 있게 처리하는 것을 목표로 한다. 추가로 늘어날 수는 있겠지만 그 개수를 최소한으로 하는 노력이 필요합니다.**
+추가로 스프링 및 라이브러리 등 자체적으로 발생하는 예외는 `@ExceptionHandler` 으로 추가해서 적절한 Error Response를 만들고 **비즈니스 요구사항에 예외일 경우 `BusinessException` 으로 통일성 있게 처리하는 것을 목표로 한다. 추가로 늘어날 수는 있겠지만 그 개수를 최소한으로 하는 노력이 필요합니다.**
 
 
 # Error Code 정의
@@ -255,7 +255,7 @@ public class DeviceController {
     ...
 }
 ```
-`if ... else`의 반복으로 인해서 sendShutDown 핵심 비지니스 코드의 이해하기가 어렵습니다.
+`if ... else`의 반복으로 인해서 sendShutDown 핵심 비즈니스 코드의 이해하기가 어렵습니다.
 
 ```java
 public class DeviceController {
@@ -286,7 +286,7 @@ public class DeviceController {
 ```
 객체 본인의 책임 외적인 것들은 DeviceShutDownError 예외를 발생시키고 있습니다. 코드의 가독성과 책임이 분명하게 드러나고 있습니다.
 
-## 비지니스 예외를 위한 최상위 BusinessException 클래스
+## 비즈니스 예외를 위한 최상위 BusinessException 클래스
 
 ![](https://github.com/cheese10yun/spring-guide/raw/master/docs/imgs/BusinessException-final.png)
 
@@ -383,7 +383,7 @@ public class Email {
 
 ```java
 try {
-    // 비지니스 로직 수행...
+    // 비즈니스 로직 수행...
 }catch (Exception e){
     e.printStackTrace();
 }
@@ -394,10 +394,10 @@ try {
 
 ```java
 try {
-    // 비지니스 로직 수행...
+    // 비즈니스 로직 수행...
 }catch (Exception e){
     e.printStackTrace();
-    throw new XXX비지니스로직예외(e);
+    throw new XXX비즈니스로직예외(e);
 }
 ```
 `try catch`를 사용해야 하는 경우라면 더 구체적인 예외로 Exception을 발생시키는 것이 좋습니다. 간단하게 정리하면
