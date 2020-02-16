@@ -109,7 +109,7 @@ inner join transaction t on o.transaction_id = t.id
 where m.id in (1, 2, 33)
 ```
 
-JSON 형식의 EXPLAIN은 기존의 표 형식 보다 출력되는 정보가 많다. 5.7 부터는 비용에 관한 정보를 부여주어서 표 형식에 비해 편리하다. JOSN 형식의 EXPLAIN에는 Extra 필드에서 Using WHERE 라고만 출력되는 것이 attacged_condition로 나와서 구체적으러 어떤 조건이 적용되는지 알 수 있다. 
+JSON 형식의 EXPLAIN은 기존의 표 형식 보다 출력되는 정보가 많다. 5.7 부터는 비용에 관한 정보를 부여주어서 표 형식에 비해 편리하다. JOSN 형식의 EXPLAIN에는 Extra 필드에서 Using WHERE 라고만 출력되는 것이 attached_condition로 나와서 구체적으러 어떤 조건이 적용되는지 알 수 있다. 
 
 ```json
 {
