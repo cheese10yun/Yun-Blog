@@ -11,7 +11,7 @@ subtitle:
 
 > 해당 코드는 [Github](https://github.com/cheese10yun/blog-sample/tree/master/application-event)를 확인할 수 있습니다.
 
-스프링에서는 Application Event를 재공해주고 있습니다. `Application Event Publisher`, `Application Event Subscriber` 방식으로 결합도를 낮춰 느슨한 결합 관계를 갖을 수 있습니다.
+스프링에서는 Application Event를 제공해주고 있습니다. `Application Event Publisher`, `Application Event Subscriber` 방식으로 결합도를 낮춰 느슨한 결합 관계를 갖을 수 있습니다.
 
 ## 시나리오
 ![](https://github.com/cheese10yun/TIL/blob/master/assets/event-part-1.png?raw=true)

@@ -123,7 +123,7 @@ class User {
     }
 }
 ```
-객체의 멤버필드를 수정 할 수 있는 수정 메소드를 재공 해주면 됩니다. 단순하게 setter라는 네이밍으로 공개하는 것보다 해당 메소드의 기능을 잘 표현하는 네이밍을 갖는 것이 적합합니다. 더 구체적인 내용은 이전 포스팅 [Settet 사용하지 않기](https://github.com/cheese10yun/spring-jpa-best-practices/blob/master/doc/step-06.md#updatemyaccount-%EB%A9%94%EC%84%9C%EB%93%9C%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8)에 정리 되어 있습니다.
+객체의 멤버필드를 수정 할 수 있는 수정 메소드를 제공 해주면 됩니다. 단순하게 setter라는 네이밍으로 공개하는 것보다 해당 메소드의 기능을 잘 표현하는 네이밍을 갖는 것이 적합합니다. 더 구체적인 내용은 이전 포스팅 [Settet 사용하지 않기](https://github.com/cheese10yun/spring-jpa-best-practices/blob/master/doc/step-06.md#updatemyaccount-%EB%A9%94%EC%84%9C%EB%93%9C%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8)에 정리 되어 있습니다.
 
 
 ## Enum을 활용한 안전성 보장

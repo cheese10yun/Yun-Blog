@@ -294,7 +294,7 @@ public class RepositoryTest {
 ```
 * `@DataJpaTest` 어노테이션을 통해서 `Repository`에 대한 Bean만 등록합니다.
 * `@DataJpaTest`는 기본적으로 메모리 데이터베이스에 대한 테스트를 진행합니다. `@AutoConfigureTestDatabase` 어노테이션을 통해서 profile에 등록된 데이터베이스 정보로 대체할 수 있습니다.
-* `JpaRepository`에서 기본적으로 기본적으로 재공해주는 `findById`, `findByAll`, `deleteById`등은 테스트를 하지 않습니다.
+* `JpaRepository`에서 기본적으로 기본적으로 제공해주는 `findById`, `findByAll`, `deleteById`등은 테스트를 하지 않습니다.
   * 기본적으로 `save()` null 제약 조건등의 테스트는 진행해도 좋다고 생각합니다.
   * 주로 커스텀하게 작성한 쿼리 메서드, `@Query`으로 작성된 JPQL등의 커스텀하게 추가된 메서드를 테스트합니다.
 
