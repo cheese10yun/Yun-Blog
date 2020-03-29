@@ -9,7 +9,7 @@ tags:
 date: 2020-03-29 00:00:00
 subtitle:
 ---
-해당 코드는 [Github](https://github.com/cheese10yun/blog-sample/tree/master/spring-mock-test)에서 확인할 수 있습니다.
+> 해당 코드는 [Github](https://github.com/cheese10yun/blog-sample/tree/master/spring-mock-test)에서 확인할 수 있습니다.
 
 대부분의 애플리케이션은 외부 인프라스트럭처와 통신하면서 진행됩니다. 대표적인 외부 스트럭처는 외부 API들이 있습니다. 이런 외부 인프라스트럭처는 Mocking 해서 원하는 응답 값을 지정하고 검증하고 싶은 부분을 검증을 진행하는 것이 흔한 패턴입니다.
 
