@@ -157,7 +157,7 @@ MockBean을 통해서 가짜 객체를 주입받고 `given()` 메서드를 통�
 
 ## 해결 방법
 
-![](https://github.com/cheese10yun/TIL/blob/035f27f38555db7576c105f41c89de59c89ba14b/assets/partner-ocp.png?raw=true)
+![](https://raw.githubusercontent.com/cheese10yun/TIL/bc6ee987d4073d59ec884210215ba1fc9307c0de/assets/partner-ocp.png)
 
 해결 방법은 간단합니다. ShinhanBankClient가 ShinhanBankApi 인터페이스를 의존하게 함으로써 **의존관계를 인터페이스를 통해서 역전시키는 것입니다.** 이것도 [개방 폐쇄의 원칙: Open Close Principle](https://github.com/cheese10yun/spring-SOLID/blob/master/docs/OCP.md)에서 포스팅한 적 이 있습니다.
 
