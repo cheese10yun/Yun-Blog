@@ -3,12 +3,13 @@ layout: post
 title: 인텔리제이 Github Code Review
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
-date: 2020-07-18
-subtitle:
 tags:
- - IntelliJ
- - Code Review
+  - IntelliJ
+  - Code Review
+date: 2020-07-18 00:00:00
+subtitle:
 ---
+
 
 인텔리제이기반으로 Github 기반 Pull Request & Code Review를 진행할 수 있습니다. 바로 기능을 살펴보겠습니다. 인텔리제이 기반 Pull Request는 [Github로 프로젝트 관리하기 Part1](https://cheese10yun.github.io/github-proejct/#pull-requestcode-review-1)을 참고해 주세요
 
