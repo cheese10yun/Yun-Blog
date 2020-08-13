@@ -10,8 +10,6 @@ tags:
 date: 2020-08-12 00:00:00
 subtitle:
 ---
-# 동일한 Bean(Class)에서 @Transactional 동작 방식
-
 동일한 Bean 내에서 `@Transactional`을 사용하는 경우 예상했던 것과 다르게 동작할 수 있습니다. 발생 원인과 해결 방법에 대해서 정리한 포스팅입니다.
 
 ```kotlin
