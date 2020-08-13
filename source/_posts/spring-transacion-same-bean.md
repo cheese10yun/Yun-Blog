@@ -10,8 +10,6 @@ tags:
 date: 2020-08-12 00:00:00
 subtitle:
 ---
-
-
 동일한 Bean 내에서 `@Transactional`을 사용하는 경우 예상했던 것과 다르게 동작할 수 있습니다. 발생 원인과 해결 방법에 대해서 정리한 포스팅입니다.
 
 ```kotlin
@@ -49,9 +47,7 @@ class TransactionApi(
     }
 }
 ```
-위 코드는 `Controller`에서 `something()` -> `save()`을 차례대로 호출하는 코드입니다. `save()` 메서드에서는 특정 경우 `RuntimeException`을 발생시키고 있습니다. 
-
-해당 코드의 트랜잭션 흐름은 `save()` 메서드에 `@Transactional` 때문에 해당 반복문 전체에 트랜잭션이 묶이게 되고 예외가 발생하면 전체가 Rollback될 것이라고 예상됩니다.
+위 코드는 `Controller`에서 `something()` -> `save()`을 차례대로 호출하는 코드입니다. `save()` 메서드에서는 특정 경우 `RuntimeException`을 발생시키고 있습니다.  `save()` 메서드에 `@Transactional` 때문에 해당 반복문 전체에 트랜잭션이 묶이게 되고 예외가 발생하면 전체가 Rollback될 것이라고 예상됩니다.
 
 ```
 curl --location --request GET 'http://localhost:8080/transaction?i=40'
@@ -85,7 +81,7 @@ public class SimpleJpaRepository<T, ID> implements JpaRepositoryImplementation<T
 
 ![](https://github.com/cheese10yun/blog-sample/raw/master/query-dsl/docs/images/result-2.png)
 
-`TransactionSynchronizationManager.getCurrentTransactionName()` 메서드를 통해서 현재 트랜잭션을 확인해 보면 두 메서드 모두 `null`이라는 것을 확인할 수 있습니다. 그렇다는 건 `this.save()` 메서드에 있는 `@Transactional`이 동작하지 않았다는 것입니다.
+`TransactionSynchronizationManager.getCurrentTransactionName()` 메서드를 통해서 현재 트랜잭션을 확인해 보면 두 메서드 모두 `null`이라는 것은`this.save()` 메서드에 있는 `@Transactional`이 동작하지 않았다는 것입니다.
 
 ## 원인
 
