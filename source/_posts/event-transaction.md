@@ -11,6 +11,7 @@ date: 2020-08-16 00:00:00
 subtitle:
 ---
 
+> 해당 코드는 [Github](https://github.com/cheese10yun/blog-sample/tree/master/event-transaction) 공개되어 있습니다.
 
 ## 회원 가입 시나리오
 
