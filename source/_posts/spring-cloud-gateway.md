@@ -10,6 +10,7 @@ tags:
 date: 2020-08-23 00:00:00
 ---
 
+> 해당 코드는 [Github](https://github.com/cheese10yun/blog-sample/tree/master/spring-gateway) 공개되어 있습니다.
 
 # 용어
 
