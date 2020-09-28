@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mockserver Netty 사용해서 Http 통신 Mocking 하기
+title: Mockserver Netty 사용해서 HTTP 통신 Mocking 하기
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
