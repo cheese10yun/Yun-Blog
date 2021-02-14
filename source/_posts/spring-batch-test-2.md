@@ -3,10 +3,12 @@ layout: post
 title: Spring Batch Test 작성 방법 및 고찰
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
-date: 2021-02-14 00:00:00
 tags:
-- Spring Batch
+  - Spring Batch
+date: 2021-02-14 00:00:00
+subtitle:
 ---
+
 
 # Spring Batch Test Code
 
