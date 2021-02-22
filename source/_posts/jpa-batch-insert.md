@@ -309,7 +309,7 @@ Query	insert into payment_back (amount, order_id) values (12, 12)
 **`GenerationType.IDENTITY`의 경우에는 Batch Insert가 진행되지 않습니다.** 그래서 다른 대안을 찾아야 했습니다. 이 부분부터는 다음 포스팅에서 이어가겠습니다.
 
 
-# 참고
+## 참고
 * [Spring Data에서 Batch Insert 최적화](https://homoefficio.github.io/2020/01/25/Spring-Data%EC%97%90%EC%84%9C-Batch-Insert-%EC%B5%9C%EC%A0%81%ED%99%94/)
 * [JPA GenerationType에 따른 INSERT 성능 차이](https://github.com/HomoEfficio/dev-tips/blob/master/JPA-GenerationType-%EB%B3%84-INSERT-%EC%84%B1%EB%8A%A5-%EB%B9%84%EA%B5%90.md)
 * [JPA Batch inserts Document](https://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#batch-session-batch-insert)
