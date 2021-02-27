@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JPA Batch Insert 성능 향상기 1편 - With JPA
+title: Batch Insert 성능 향상기 1편 - With JPA
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
