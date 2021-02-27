@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JPA Batch Insert 성능 향상기 2편 - 성능 측정
+title: Batch Insert 성능 향상기 2편 - 성능 측정
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
