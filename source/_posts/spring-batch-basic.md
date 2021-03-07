@@ -133,7 +133,7 @@ public JobFlowBuilder flow(Step step){
 * ItemWriter도 ItemReader와 비슷한 방식을 구현합니다. 제네릭으로 원하는 타입을 받고 write() 메서드는 List를 사용해서 저장한 타입의 리스트를 매게변수로 받습니다.
 
 
-## 휴먼회원 배치 설계
+## 휴면회원 배치 설계
 <p align="center">
   <img src="https://github.com/cheese10yun/TIL/raw/master/assets/bach-process.png">
 </p>
@@ -142,14 +142,14 @@ public JobFlowBuilder flow(Step step){
 
 * (1) DB에 저장된 데이터 중 1년간 업데이트되지 않은 사용자를 찾는 로직 ItemReader 구현합니다.
 * (2) 대상 사용자 데이터의 상탯값을 휴면으로 전환하는 프로세스를 ItemProcessor에 구현합니다.
-* (3) 상태값이 변환된 휴먼회원을 실제DB에 저장하는 ItemWriter를 구현합니다.
+* (3) 상태값이 변환된 휴면회원을 실제DB에 저장하는 ItemWriter를 구현합니다.
 
-## 휴먼회원 배치 구현
+## 휴면회원 배치 구현
 
 배치처리 순서는 다음과 같습니다.
 
 1. 휴면 회원 Job 설정
-2. 휴먼 회원 Step 설정
+2. 휴면 회원 Step 설정
 3. 휴면 회원 Reader, Processor, Writer 설정
 
 
@@ -169,7 +169,7 @@ public class InactiveUserJobConfig {
 
 * (1) Job 생성을 직관적이고 편리하게 도와주는 빌더 JobBuilderFactory를 주입받습니다.
 * (2) inactiveUserJob 이라는 JobBuilder를 생성하며 `preventRestart()` 설정을 통해 재실행을 막았습니다.
-* (3) `start(inactiveJobStep)`은 파라미터에서 주입받은 휴먼회원 관련 Step인 inactiveJobStep을 제일 먼저 실행하도록 설정하는 부분입니다.
+* (3) `start(inactiveJobStep)`은 파라미터에서 주입받은 휴면회원 관련 Step인 inactiveJobStep을 제일 먼저 실행하도록 설정하는 부분입니다.
 
 기본적인 Job설정은 완료 했습니다. Step 설정을 진행하겠습니다.
 
@@ -206,8 +206,8 @@ public QueueItemReader<User> inactiveUserReader() {
 }
 ```
 * (1) 기본 빈 생성은 싱글턴이지만 @StepScope를 사용하면 해당 메서드는 Step의 주기에 따라 새로운 빈을 생성합니다. **즉, 각 Step의 실행마다 새로운 빈을 만들기 때문에 지연 생성이 가능합니다. 주의할 사항은 @StepScode는 기본 프록시 모드가 반환되는 클래스 타임을 참조하기 때문에 @StepScode를 사용하면 반드시 구현된 반환 타입을 명시해 변환해야합니다.** 해당 예제는 QueueItemReader<User>라고 명시했습니다.
-* (2) `findByUpdatedDateBeforeAndStatusEquals()` 메서드를 통해서 휴먼 회원 리스트를 가져옵니다.
-* (3) QueueItemReader 객체를 생성하고 불러온 휴먼회원 타깃 대상을 데이터 객체에 넣어 반환합니다.
+* (2) `findByUpdatedDateBeforeAndStatusEquals()` 메서드를 통해서 휴면 회원 리스트를 가져옵니다.
+* (3) QueueItemReader 객체를 생성하고 불러온 휴면회원 타깃 대상을 데이터 객체에 넣어 반환합니다.
 
 ```java
 public class QueueItemReader<T> implements ItemReader<T> {
@@ -235,7 +235,7 @@ public ItemProcessor<User, User> inactiveUserProcessor() {
     return user -> user.setInactive();
 }
 ```
-읽어온 타깃 데이터를 휴먼 회원으로 전환시키는 Processor입니다. reader에서 읽은 User를 휴면 상태로 전환화는 Processor 메서드를 추가하는 예입니다.
+읽어온 타깃 데이터를 휴면 회원으로 전환시키는 Processor입니다. reader에서 읽은 User를 휴면 상태로 전환화는 Processor 메서드를 추가하는 예입니다.
 
 ### Writer 설정
 ```java
@@ -534,7 +534,7 @@ JOB_EXECUTION_ID | VERSION | JOB_INSTANCE_ID | CREATE_TIME | START_TIME | END_TI
   <img src="https://github.com/cheese10yun/TIL/raw/master/assets/job-job-instance-job-execution.png">
 </p>
 
-* `Job`: 특정 잡, 2달이상 로그인안한 유저 휴먼 회원 처리 등
+* `Job`: 특정 잡, 2달이상 로그인안한 유저 휴면 회원 처리 등
 * `Job Instance`: Job Parameter를 실행한 Job(Job Parameter 단위로 생성)
 * `Job Execution`: Job Parameter로 실행한 Job의 실행, 1번 째 시도 혹은 그 다음 등
 
