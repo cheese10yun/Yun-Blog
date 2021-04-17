@@ -17,7 +17,7 @@ date: 2020-08-23 00:00:00
 | 명칭               | 설명                                                                                                                                            |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | 라우트(Route)      | 라우트는 목적지 URI, 조건자 목록과 필터의 목록을 식별하기 위한 고유 ID로 구성된다. 라우트는 모든 조건자가 충족됐을 때만 매칭된다                |
-| 조건자(Predicates) | 각 요청을 처리하기 전에 실행되는 로직, 헤더와 입력돤값 등 다양한 HTTP 요청이 정의된 기준에 맞는지를 찾는다.                                     |
+| 조건자(Predicates) | 각 요청을 처리하기 전에 실행되는 로직, 헤더와 입력된 값 등 다양한 HTTP 요청이 정의된 기준에 맞는지를 찾는다.                                     |
 | 필터(Filters)      | HTTP 요청 또는 나가는 HTTP 응답을 수정할 수 있게한다. 다운스트림 요청을 보내기전이나 후에 수정할 수 있다. 라우트 필터는 특정 라우트에 한정된다. |
 
 # Getting Started
@@ -35,7 +35,7 @@ fun main(args: Array<String>) {
     runApplication<GatewayServerApplication>(*args)
 }
 ```
-필요한 의존성만 추가하면 빠르게 Srping Cloud Gateway를 만들 수 있습니다.
+필요한 의존성만 추가하면 빠르게 Spring Cloud Gateway를 만들 수 있습니다.
 
 
 ## Gateway Route 노출
@@ -82,7 +82,7 @@ API를 서버를 만들고 게이트웨이와 연결해 보겠습니다.
                         - Path=/order/**
                     filters:
                         - RewritePath=/order/(?<path>.*),/$\{path}
-                
+
                 -   id: cart-service
                     uri: http://localhost:8181
                     predicates:
@@ -106,7 +106,7 @@ API를 서버를 만들고 게이트웨이와 연결해 보겠습니다.
 @RestController
 @RequestMapping("/orders")
 class OrderApi(
-    private val orderRepository: OrderRepository
+        private val orderRepository: OrderRepository
 ) {
 
     @GetMapping
@@ -116,8 +116,8 @@ class OrderApi(
 @Entity
 @Table(name = "orders")
 class Order(
-    @Column(name = "product_id", nullable = false)
-    val productId: Long
+        @Column(name = "product_id", nullable = false)
+        val productId: Long
 ) : EntityAuditing() {
     @Column(name = "order_number", nullable = false)
     val orderNumber: String = UUID.randomUUID().toString()
@@ -129,7 +129,7 @@ class Order(
 @RestController
 @RequestMapping("/carts")
 class CartApi(
-    private val cartRepository: CartRepository
+        private val cartRepository: CartRepository
 ) {
     @GetMapping
     fun getCarts(pageable: Pageable) = cartRepository.findAll(pageable)
@@ -138,8 +138,8 @@ class CartApi(
 @Entity
 @Table(name = "cart")
 class Cart(
-    @Column(name = "product_id", nullable = false)
-    var productId: Long
+        @Column(name = "product_id", nullable = false)
+        var productId: Long
 ) : EntityAuditing()
 ```
 
@@ -255,7 +255,7 @@ routes:
             - Path=/order/**
             - Before=2020-08-20T19:25:19.126+09:00[Asia/Seoul]
 ```
-`Befroe`는 특정 날짜 이전 호출이 가능합니다. 현재 날짜가 `Befroe`에서 지정한 날짜 보다 이전 이어야 합니다. 특정 API가 deprecate가 되는 경우 유용합니다.
+`Before`는 특정 날짜 이전 호출이 가능합니다. 현재 날짜가 `Before`에서 지정한 날짜 보다 이전 이어야 합니다. 특정 API가 deprecate가 되는 경우 유용합니다.
 
 ## Between
 ```yml
@@ -289,7 +289,7 @@ routes:
         filters:
             - RewritePath=/order/(?<path>.*),/$\{path}
 ```
-`grpup`, `weight`를 기반으로 그룹별로 가중치를 계산하게 됩니다. 위 설정은 70% `order-service-high`, 30% `order-service-low`으로 라우팅을 분배합니다.
+`group`, `weight`를 기반으로 그룹별로 가중치를 계산하게 됩니다. 위 설정은 70% `order-service-high`, 30% `order-service-low`으로 라우팅을 분배합니다.
 
 # Filters
 
@@ -303,11 +303,11 @@ RewritePath는 HTTP Request를 수정하여 특정 Server에 전달하게 됩니
 ```yml
  routes:
      -   id: order-service
-         uri: http://localhost:8181    
+         uri: http://localhost:8181
          filters:
              - RewritePath=/order/(?<path>.*),/$\{path}
 ```
- 
+
 `RewritePath`를 통해서 `/order/orders` -> `/order/orders`으로 재작성합니다. 즉, `/order/orders?page=0&size=5` 요청이 오면 `/order/`를제거하고 `orders?page=0&size=5`를 기반으로 `order-service`를 호출하게 됩니다.
 
 
@@ -354,7 +354,7 @@ spring:
 @RestController
 @RequestMapping("/orders")
 class OrderApi(
-    private val orderRepository: OrderRepository
+        private val orderRepository: OrderRepository
 ) {
 
     @GetMapping
@@ -411,7 +411,7 @@ getOrders 호출
 @RestController
 @RequestMapping("/orders")
 class OrderApi(
-    private val orderRepository: OrderRepository
+        private val orderRepository: OrderRepository
 ) {
 
     var errorCount = 0
@@ -479,7 +479,7 @@ spring:
 @RestController
 @RequestMapping("/orders")
 class OrderApi(
-    private val orderRepository: OrderRepository
+        private val orderRepository: OrderRepository
 ) {
 
     @GetMapping
@@ -570,7 +570,7 @@ cloud:
                     - Path=/order/**
                 filters:
                     - RewritePath=/order/(?<path>.*),/$\{path}
-            
+
             -   id: cart-service
                 uri: lb://cart-service
                 predicates:
@@ -608,25 +608,25 @@ Spring Cloud Gateway는 유레카 연동도 손쉽게 가능합니다. 본 포�
 
 ```yml
 gateway:
-        discovery:
-            locator:
-                enabled: true
-        routes:
-            -   id: order-service
-#                    uri: http://localhost:8181 # 기존 방시
-                uri: lb://order-service # 유레카를 통한 방식
-                predicates:
-                    - Path=/order/**
-                filters:
-                    - RewritePath=/order/(?<path>.*),/$\{path}
+    discovery:
+        locator:
+            enabled: true
+    routes:
+        -   id: order-service
+            #                    uri: http://localhost:8181 # 기존 방시
+            uri: lb://order-service # 유레카를 통한 방식
+            predicates:
+                - Path=/order/**
+            filters:
+                - RewritePath=/order/(?<path>.*),/$\{path}
 
-            -   id: cart-service
-#                    uri: http://localhost:8181 # 기존 방시
-                uri: lb://cart-service # 유레카를 통한 방식
-                predicates:
-                    - Path=/cart/**
-                filters:
-                    - RewritePath=/cart/(?<path>.*),/$\{path}
+        -   id: cart-service
+            #                    uri: http://localhost:8181 # 기존 방시
+            uri: lb://cart-service # 유레카를 통한 방식
+            predicates:
+                - Path=/cart/**
+            filters:
+                - RewritePath=/cart/(?<path>.*),/$\{path}
 ```
 설정은 간단합니다. `uri: lb://{service-name}`형식으로 유레카에 등록된 서비스 네임을 작성하게 되면 완료됩니다. 유레카에 등록했기 때문에 Feign, Ribbon 이용한 클라이언트 사이드 로드 밸런싱이 가능합니다.
 
@@ -639,14 +639,14 @@ interface CartClient {
     fun getCart(@PathVariable id: Long): CartResponse
 
     data class CartResponse(
-        val productId: Long
+            val productId: Long
     )
 }
 
 @RestController
 @RequestMapping("/orders")
 class OrderApi(
-    private val cartClient: CartClient
+        private val cartClient: CartClient
 ) {
 
     @GetMapping("/carts/{id}")
@@ -672,6 +672,57 @@ CUSTOM-RESPONSE-HEADER: It worked
 Response code: 200 (OK); Time: 109ms; Content length: 15 bytes
 ```
 
+## Filter 설명
+
+![](https://cloud.spring.io/spring-cloud-gateway/reference/html/images/spring_cloud_gateway_diagram.png)
+
+클라이언트는 Spring Cloud Gateway를 통해 요청을 하고 게이트웨이는 매핑에서 요청이 경로와 일치한다고 판단하면 게이트웨이 웹 처리기로 요청을 전송하게 됩니다.
+
+> [Spring Cloud Gateway Document](https://cloud.spring.io/spring-cloud-gateway/reference/html/)
+
+
+![](https://github.com/cheese10yun/blog-sample/raw/master/spring-msa/docs/images/gateway-flow.png)
+
+```kotlin
+@Component
+class CustomFilter : AbstractGatewayFilterFactory<CustomFilter.Config>(Config::class.java) {
+    val log by logger()
+
+    override fun apply(config: Config): GatewayFilter {
+        return GatewayFilter { exchange, chain ->
+            val request = exchange.request
+            val response = exchange.response
+            log.info("CustomFilter request id: ${request.id}")
+            chain.filter(exchange).then(Mono.fromRunnable { log.info("CustomFilter response status code: ${response.statusCode}") })
+        }
+    }
+
+    class Config
+}
+
+@Component
+class GlobalFilter : AbstractGatewayFilterFactory<GlobalFilter.Config>(Config::class.java) {
+    val log by logger()
+
+    override fun apply(config: Config): GatewayFilter {
+        return GatewayFilter { exchange, chain ->
+            val request = exchange.request
+            val response = exchange.response
+
+            log.info("Global request id: ${request.id}")
+            chain.filter(exchange).then(Mono.fromRunnable {
+                log.info("Global response status code: ${response.statusCode}")
+            })
+        }
+    }
+
+    class Config
+}
+```
+필터는 모두 AbstractGatewayFilterFactory를 상속받아 구현을 진행합니다. 실제 Gateay 로그는 아래와 같습니다.
+
+![](https://github.com/cheese10yun/blog-sample/raw/master/spring-msa/docs/images/gateway-log.png)
+
+
 # 출처
 * [Spring Cloud Gateway  Reference](https://cloud.spring.io/spring-cloud-gateway/reference/html/)
-
