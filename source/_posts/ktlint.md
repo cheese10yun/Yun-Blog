@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ktlint 코드 스탙일 검사
+title: Ktlint 코드 스타일 검사
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
