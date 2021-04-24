@@ -93,7 +93,7 @@ API를 서버를 만들고 게이트웨이와 연결해 보겠습니다.
 * id: 해당 라우트의 고유 식별자를 나타냅니다.
 * uri: 해당 라우터의 주소를 나타냅니다.
 * predicates: 해당 라우터의 조건을 작성, `/order/**`으로 시작하는 요청의 경우 해당 라우터로 요청을 보냄
-* filters: 해당 라우터의 필터로, RewritePath는 강제로 Patch를 다시 작성합니다.
+* filters: 해당 라우터의 필터로, RewritePath는 강제로 Path를 다시 작성합니다.
 
 
 
@@ -348,7 +348,7 @@ spring:
                                     factor: 2
                                     basedOnPreviousValue: false
 ```
-제시도 횟수는 `retries: 3`, 재시도 HTTP Status는 `statuses: INTERNAL_SERVER_ERROR (500)`, 재시도 HTTP method는 `GET` `backoff` 설정은 `10ms(firstBackoff) * (2(factor)* 3(retries))`으로 `retries` 만큼 반복됩니다.
+제시도 횟수는 `retries: 3`, 재시도 HTTP Status는 `statuses: INTERNAL_SERVER_ERROR (500)`, 재시도 HTTP method는 `GET` `backoff` 설정은 `1000ms(firstBackoff) * (2(factor) ^ n(retries))`으로 `retries` 만큼 반복됩니다.
 
 ```kotlin
 @RestController
