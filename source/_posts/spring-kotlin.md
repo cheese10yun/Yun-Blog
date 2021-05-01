@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 코틀린으로 스프링 개발할 때
+title: Kotlin으로 Spring 개발할 때
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
