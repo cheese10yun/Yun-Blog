@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Spring Master, Slave 트랜잭션 처리 방식'
+title: 'Spring 레플리케이션 트랜잭션 처리 방식'
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
