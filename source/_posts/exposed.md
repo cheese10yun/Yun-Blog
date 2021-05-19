@@ -10,6 +10,7 @@ tags:
 date: 2021-05-20 01:38:18
 ---
 
+> 해당 코드는 [Github](https://github.com/cheese10yun/blog-sample/tree/master/exposed-study) 공개되어 있습니다.
 
 
 ## Exposed 란 ?
