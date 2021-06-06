@@ -8,8 +8,7 @@ subtitle:
 tags:
 ---
 
-
-스프링 배치 애플리케이션에서 데이터베이스의 대량의 데이터를 처리할 때 Reader에 대한 성능 분석과 성능에 대한 측정을 정리한 포스팅 내용입니다.
+스프링 배치 애플리케이션에서 데이터베이스의 대량의 데이터를 처리할 때 Reader에 대한 성능 분석과 성능에 대한 측정을 정리한 포스팅입니다.
 
 ## 조회 대상
 
@@ -237,7 +236,7 @@ limit 4999000, 1000;
 ![](https://raw.githubusercontent.com/cheese10yun/blog-sample/master/batch-study/docs/img/explan_2.png)
 
 * `type: ALL` **풀 스캔, 테이블의 데이터 전체에 접근**
-* `key: IDXfxl3u00ue9kdoqelvslc1tj6h(created_at)`: `possible_keys` 필드를 이용하지 않음, 즉 인덱스 사용 안 함
+* `key: NULL`: `possible_keys` 필드를 이용하지 않음, 즉 인덱스 사용 안 함
 * `Extra`
     * `Using where` **테이블에서 행을 가져온 후 추가적으로 검색 조건을 적용해 행의 범위를 축소**
     * `Using filesort` **ORDER BY 인덱스로 해결하지 못하고, filesort(MySQL의 quick sort)로 행을 정렬**
@@ -304,9 +303,10 @@ limit 1000;
 | 1 | SIMPLE | payment0\_ | NULL | range | PRIMARY,IDXfxl3u00ue9kdoqelvslc1tj6h | PRIMARY | 8 | NULL | 1000 | 50 | Using where |
 ![](https://raw.githubusercontent.com/cheese10yun/blog-sample/master/batch-study/docs/img/explain_4.png)
 
+
 * `type: range` 인덱스 특정 범위의 행에 접근, 즉 인덱스가 제대로 동작
 * `possible_keys: PRIMARY, IDXfxl3u00ue9kdoqelvslc1tj6h(created_at)`는 `id`, `created_at` 칼럼 인덱스로 사용 가능
-* `key: PRIMARY`: `possible_keys` 필드 중 `id`를 인덱스로 사용
+* `key: PRIMARY`: `possible_keys` 필드 중 `id`를 인덱스로 사용, InnoDB 테이블에서는 기본적으로 `PRIMARY` 키를 기준으로 클러스터링 되어 저장되기 떄문에 실행 계획에서 `PRIMARY` 키는 기본적으로 다른 보조인덱스에 비해 비중이 높게 설정된다.
 * `Extra: Using where` **테이블에서 행을 가져온 후 추가적으로 검색 조건을 적용해 행의 범위를 축소**
 
 **첫 청크와 마지막 청크의 실행 계획이 동일한 것을 확인할 수 있습니다. 즉 해당 리더는 청크 사이즈, 데이터 총 rows와 별개로 조회 시간이 균일합니다.**
