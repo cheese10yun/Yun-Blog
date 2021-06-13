@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring Batch Reader 성능 분석 및 측정
+title: Spring Batch Reader 성능 분석 및 측정 part 1
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 date: 2021-06-05 15:41:45
