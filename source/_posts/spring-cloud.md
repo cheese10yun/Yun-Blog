@@ -301,7 +301,7 @@ dependencies {
 필요한 의존성을 추가합니다.
 
 ![](https://github.com/cheese10yun/msa-study-sample/raw/master/static/bus-log.png)
-서버가 시작될때 스프링 클라우드 버스에 등록되고, 클라우드 버스의 이벤트를 수신하게 됩니다. Rabbmit MQ 컨넥션은 자동으로 연결됩니다. (스프링 너란 자식....)
+서버가 시작될때 스프링 클라우드 버스에 등록되고, 클라우드 버스의 이벤트를 수신하게 됩니다. Rabbmit MQ 커넥션은 자동으로 연결됩니다. (스프링 너란 자식....)
 
 
 ![](https://github.com/cheese10yun/msa-study-sample/raw/master/static/intellj-port-2.png)
