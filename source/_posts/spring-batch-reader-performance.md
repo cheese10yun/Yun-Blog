@@ -312,7 +312,7 @@ limit 1000;
 **첫 청크와 마지막 청크의 실행 계획이 동일한 것을 확인할 수 있습니다. 즉 해당 리더는 청크 사이즈, 데이터 총 rows와 별개로 조회 시간이 균일합니다.**
 
 
-다음편에 HibernateCursorItemReader 관련 포스팅을 진행하겠습니다.
+다음편은 [Spring Batch Reader 성능 분석 및 측정 part 2](https://cheese10yun.github.io/spring-batch-reader-performance-2/)를 참고해주세요.
 
 
 ## 참고
