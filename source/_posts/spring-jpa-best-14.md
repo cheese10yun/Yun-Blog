@@ -6,8 +6,8 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
-  - JUnit5
-  - Best Practices
+  - Test
+  - Guide
 date: 2019-02-06 21:15:00
 thumbnail:
 ---

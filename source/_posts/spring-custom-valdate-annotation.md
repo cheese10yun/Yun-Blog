@@ -5,7 +5,7 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
-  - Validate
+  - Guide
 date: 2019-03-20 01:40:00
 subtitle:
 thumbnail:

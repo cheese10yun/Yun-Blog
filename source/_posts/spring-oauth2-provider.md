@@ -7,7 +7,6 @@ header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
   - OAuth2
-  - Provider
 date: 2018-11-24 03:37:00
 ---
 

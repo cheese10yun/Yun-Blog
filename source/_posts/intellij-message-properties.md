@@ -6,7 +6,6 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Intellij
-  - message properties
 thumbnail: 'https://i.imgur.com/1rPFIE1.png'
 date: 2018-06-06 00:00:00
 ---

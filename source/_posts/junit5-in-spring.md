@@ -4,7 +4,6 @@ title: Junit5 with Spring boot
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - Junit5
   - Test
 date: 2019-11-03 18:11:20
 subtitle:

@@ -4,6 +4,8 @@ title: 블로그를 시작하려는 당신에게
 header-img: https://i.imgur.com/avC1Xor.jpg
 catalog: true
 date: 2017-01-28
+tags:
+  - Essay
 ---
 
 블로그 포스팅을 하면서 이것저것 불편 하점을 느끼다 보니 **Brunch**에서 **Tistory**로 또 **Tistory**에서 **GitHub Page**

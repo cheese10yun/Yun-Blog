@@ -6,10 +6,6 @@ catalog: true
 header-img: https://i.imgur.com/avC1Xor.jpg
 tags:
 - Node
-- imagemin
-- AWS
-- S3 
-- Image Upload
 ---
 
 

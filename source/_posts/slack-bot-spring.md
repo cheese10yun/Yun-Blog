@@ -5,8 +5,6 @@ subtitle: Slack Message
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - Slack
-  - Bot
   - Spring
 date: 2018-03-18 02:00:00
 thumbnail:

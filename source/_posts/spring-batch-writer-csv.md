@@ -4,8 +4,7 @@ title: Spring Batch CSV Reader & Writer
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - Spring Batch
-  - CSV
+- Spring Batch
 date: 2020-12-19 00:00:00
 subtitle:
 ---

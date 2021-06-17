@@ -6,8 +6,6 @@ catalog: true
 header-img: https://i.imgur.com/avC1Xor.jpg
 tags: 
 - Node
-- Login
-- Passport
 ---
 
 ![EC2 Innound](https://i.imgur.com/MlUddzo.png)

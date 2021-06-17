@@ -6,7 +6,6 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Transaction
-  - Lock
 date: 2019-05-12 02:57:00
 thumbnail:
 ---

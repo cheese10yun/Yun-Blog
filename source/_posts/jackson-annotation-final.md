@@ -6,7 +6,6 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Jackson
-  - Slideshare
 date: 2018-07-08 19:00:00
 thumbnail:
 ---

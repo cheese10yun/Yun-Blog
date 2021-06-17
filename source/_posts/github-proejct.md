@@ -6,8 +6,6 @@ catalog: true
 header-img: 'https://i.imgur.com/vpKKHrD.jpg'
 tags:
   - Github
-  - Issue
-  - Proejct Management
 date: 2018-07-08 17:13:46
 ---
 

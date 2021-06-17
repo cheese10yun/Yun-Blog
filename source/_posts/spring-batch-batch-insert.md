@@ -4,9 +4,9 @@ title: Batch Insert 성능 향상기 2편 - 성능 측정
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - JPA
-  - Batch Insert
-  - Exposed
+- JPA
+- 성능
+- Exposed
 date: 2021-02-27 00:00:00
 subtitle:
 ---

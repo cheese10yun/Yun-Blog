@@ -7,7 +7,6 @@ header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
   - Guide
-  - Directory
 date: 2019-06-16 00:45:00
 thumbnail:
 ---

@@ -6,9 +6,6 @@ catalog: true
 header-img: 'https://i.imgur.com/vpKKHrD.jpg'
 tags:
   - Github
-  - Issue
-  - Proejct Management
-  - ZenHub
 date: 2018-07-17 00:00:00
 ---
 

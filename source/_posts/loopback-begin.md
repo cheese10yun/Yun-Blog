@@ -7,7 +7,6 @@ header-img: https://i.imgur.com/avC1Xor.jpg
 tags:
 - LoopBack
 - Node
-- JavaScript
 
 ---
 최근 이직을 하게 되어 이렇게 오랜만에 포스팅하게 되었습니다. 바쁘다는 핑계로 미루다 보면 계속 못할 거 같아 많은 준비는 못 했지만 이번 회사에서 처음 접하게 된 Loopback Framework를 간단하게 정리하겠습니다.

@@ -4,8 +4,7 @@ title: Junit5
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - test
-  - junit5
+  - Test
 date: 2020-06-16 21:45:50
 subtitle: 인스턴스 생성 특징, 테스트 순서
 ---

@@ -6,7 +6,6 @@ header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
   - OAuth2
-  - Social
 date: 2018-09-15 00:00:00
 subtitle:
 thumbnail:

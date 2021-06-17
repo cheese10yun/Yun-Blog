@@ -7,7 +7,6 @@ header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
   - Guide
-  - API
 date: 2019-03-20 01:00:00
 thumbnail:
 ---

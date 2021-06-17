@@ -6,6 +6,8 @@ header-img: 'https://i.imgur.com/avC1Xor.jpg'
 date: 2021-06-13
 subtitle: HibernateCursorItemReader 측정 및 분석
 tags:
+- Spring Batch
+- 성능
 ---
 
 [Spring Batch Reader 성능 분석 및 측정 part 1](https://cheese10yun.github.io/spring-batch-reader-performance/) 이어지는 글입니다.

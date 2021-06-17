@@ -3,9 +3,7 @@ layout: post
 title: Slack + Coveralls 연동
 catalog: true
 tags:
-  - Slack
-  - Coveralls
-  - Test Coverage
+  - Test
 date: 2018-03-17
 subtitle: Slack
 header-img: https://i.imgur.com/avC1Xor.jpg

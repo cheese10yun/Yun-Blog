@@ -4,8 +4,8 @@ title: Batch Insert 성능 향상기 1편 - With JPA
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - JPA
-  - Batch Insert
+- JPA
+- 성능
 date: 2021-02-22 00:00:00
 subtitle:
 ---

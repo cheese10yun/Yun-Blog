@@ -4,7 +4,7 @@ title: 스프링 Immutable으로 Properties 설정하기
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - properties
+  - Spring
 date: 2019-11-20 00:00:00
 subtitle:
 ---

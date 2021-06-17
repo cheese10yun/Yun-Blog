@@ -5,7 +5,6 @@ subtitle: 경량 ORM
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - ORM
   - Exposed
 date: 2021-05-20 01:38:18
 ---

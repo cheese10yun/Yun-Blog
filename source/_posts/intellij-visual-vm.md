@@ -4,7 +4,7 @@ title: Visual VM Launcher IntelliJ
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - VisualVM Launcher
+  - IntelliJ
 date: 2020-05-30 00:00:00
 subtitle:
 ---

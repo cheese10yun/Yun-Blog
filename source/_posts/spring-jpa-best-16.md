@@ -8,7 +8,7 @@ tags:
   - Spring
   - JPA
   - QueryDsl
-  - Best Practices
+  - Guide
 date: 2019-06-13 01:30:00
 thumbnail:
 ---

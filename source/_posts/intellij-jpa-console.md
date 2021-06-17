@@ -7,7 +7,6 @@ header-img: https://i.imgur.com/avC1Xor.jpg
 tags:
   - IntelliJ
   - JPA
-  - JPA Console
 date: 2018-01-23 01:30:46
 ---
 

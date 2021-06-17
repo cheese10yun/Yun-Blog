@@ -5,8 +5,7 @@ subtitle: Sprong Batch 기초를 알아보자
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - Spring
-  - Batch
+- Spring Batch
 date: 2018-11-20 01:12:00
 ---
 > 출저 [처음으로 배우는 스프링 부트 2](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791162241264&orderClick=LAA&Kc=)을 보고 정리한 포스팅입니다. 배치 관련된 국내 서적 중에서 스프링 배치를 가장 잘 정리 한 거 같습니다.

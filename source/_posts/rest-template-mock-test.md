@@ -4,7 +4,6 @@ title: RestTemplate Mock 기반 테스트 하기
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - RestTemplate
   - Test
 date: 2020-02-01
 subtitle:

@@ -7,7 +7,7 @@ header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
   - JPA
-  - Best Practices
+  - Guide
 date: 2018-04-28 03:51:10
 thumbnail:
 ---

@@ -5,8 +5,6 @@ catalog: true
 date: 2017-02-16
 header-img: https://i.imgur.com/avC1Xor.jpg
 tags: 
-- Kakao 
-- Bot
 - Node
 ---
 

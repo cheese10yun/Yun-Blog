@@ -9,7 +9,6 @@ date: 2018-03-24
 tags:
   - Spring
   - OOP
-  - SOLID
 ---
 
 ![](https://i.imgur.com/PI6g3ku.png)

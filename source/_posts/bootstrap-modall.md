@@ -5,8 +5,7 @@ catalog: true
 date: 2017-01-10
 header-img: https://i.imgur.com/avC1Xor.jpg
 tags: 
-- Bootstrap
-- Modal
+- JS
 ---
 
 ![EC2 Innound](https://i.imgur.com/SHu3JYX.png)

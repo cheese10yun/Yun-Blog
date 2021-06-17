@@ -8,9 +8,6 @@ header-img: https://i.imgur.com/avC1Xor.jpg
 tags:
 - LoopBack
 - Node
-- JavaScript
-categories:
-- LoopBack
 ---
 
 Loopback 으로 게시판을 만드는 프로젝트를 진행하겠습니다. 앞선 포스팅에서 설명 드렸다시피 Loopback은 정말 빠르게 REST API를 만들어 낼 수 있습니다. 회원 가입, 로그인, 로그아웃, ACL, 설정 등 매번 구현해야 하는 귀찮은 로직들을 내부 Model을 사용해서 빠르게 만들 수 있습니다. 하지만 이렇게 말로 설명해 드리는 것보다 웹에 가장 간단한 게시판으로 포스팅을 진행하겠습니다.

@@ -6,8 +6,7 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
-  - REST Docs
-  - Document
+  - Test
 date: 2018-10-27 00:00:00
 thumbnail:
 ---

@@ -5,7 +5,6 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Github
-  - Action
 date: 2020-05-13 00:00:00
 subtitle:
 ---

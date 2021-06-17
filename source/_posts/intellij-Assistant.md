@@ -6,8 +6,6 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - IntelliJ
-  - Properties
-  - Assistant
 thumbnail: 'https://i.imgur.com/6xFlHcv.png'
 date: 2018-08-05 00:00:00
 ---

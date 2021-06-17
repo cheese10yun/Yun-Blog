@@ -6,7 +6,6 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Lombok
-  - config
 date: 2018-12-22 16:00:00
 thumbnail:
 ---

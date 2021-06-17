@@ -5,8 +5,7 @@ subtitle: 스프링 JPA로 알아보는 캡슐화
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - 캡슐화
-  - 객체지향
+  - OOP
 date: 2019-01-05 16:23:00
 thumbnail:
 ---

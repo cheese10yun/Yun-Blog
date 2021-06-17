@@ -6,7 +6,6 @@ header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
   - Gradle
-  - Module
 date: 2019-06-11 00:32:00
 subtitle:
 thumbnail:

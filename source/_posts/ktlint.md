@@ -4,7 +4,7 @@ title: Ktlint 코드 스타일 검사
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - Ktlint
+  - Kotlin
 date: 2021-04-18 13:14:24
 subtitle:
 ---

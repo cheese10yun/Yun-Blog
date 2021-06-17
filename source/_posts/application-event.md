@@ -4,7 +4,7 @@ title: 스프링 Application Event
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - 트랜잭션
+  - Transaction
 date: 2019-11-30 00:00:00
 subtitle:
 ---

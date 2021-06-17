@@ -7,8 +7,6 @@ date: 2017-01-11
 header-img: https://i.imgur.com/avC1Xor.jpg
 tags: 
 - Node
-- Crontab
-- Scheduler
 ---
 안녕하세요 스타트업에서 근무하고 있는 신입 개발자입니다. 이번에 포스팅할 주제는 Crontab을 이용해서 특정 시점에Node API를 호출하는 내용입니다. [GitHub Brnacb develop-crontab-api](https://github.com/cheese10yun/node-yun)에 소스코드 참고해주세요
 

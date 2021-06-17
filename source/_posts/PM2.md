@@ -6,9 +6,6 @@ catalog: true
 header-img: https://i.imgur.com/avC1Xor.jpg
 tags: 
 - Node
-- PM2
-- Process Management
-
 ---
 
 안녕하세요 스타트업에서 근무하고 있는 신입 개발자입니다. 저희는 Node 프로세스 관리를 PM2 모듈을 이용해서 관리하고 있습니다. PM2에 대한 기초지식이 있으신 분들은 3번 항목만 보셔도 좋습니다.

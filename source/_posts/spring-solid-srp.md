@@ -6,8 +6,7 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
-  - SOLID
-  - SRP
+  - OOP
 date: 2018-11-19 21:26:00
 ---
 

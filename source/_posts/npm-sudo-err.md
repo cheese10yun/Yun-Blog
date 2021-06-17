@@ -5,7 +5,7 @@ date: 2017-02-11
 catalog: true
 header-img: https://i.imgur.com/avC1Xor.jpg
 tags:
-- NPM
+- Node
 ---
 
 ```bash

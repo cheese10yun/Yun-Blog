@@ -5,8 +5,7 @@ subtitle: Getting Started
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - Gateway
-  - Cloud
+  - Spring
 date: 2020-08-23 00:00:00
 ---
 

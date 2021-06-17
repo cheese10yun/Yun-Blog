@@ -5,7 +5,7 @@ catalog: true
 date: 2017-01-31
 header-img: https://i.imgur.com/avC1Xor.jpg
 tags:
- - Blog
+ - Essay
 
 ---
 

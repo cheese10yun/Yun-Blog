@@ -6,8 +6,6 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - IntelliJ
-  - Tip
-  - Git
 thumbnail: 'https://i.imgur.com/6xFlHcv.png'
 date: 2018-04-03 00:00:00
 ---

@@ -8,10 +8,6 @@ header-img: https://i.imgur.com/avC1Xor.jpg
 thumbnail: https://i.imgur.com/cNL3e5B.png
 tags:
 - Node
-- Package
-- API
-categories: 
-- [Node]
 ---
 
 ## 프로젝트 구성

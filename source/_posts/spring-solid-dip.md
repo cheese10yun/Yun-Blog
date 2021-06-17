@@ -6,8 +6,7 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
-  - SOLID
-  - DIP
+  - OOP
 date: 2018-07-27 00:00:00
 thumbnail:
 ---

@@ -7,8 +7,7 @@ header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
   - JPA
-  - Best Practices
-  - Embedded
+  - Guide
 date: 2018-05-08 00:00:00
 thumbnail:
 ---

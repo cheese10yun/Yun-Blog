@@ -4,9 +4,7 @@ title: Builder 기반으로 객체를 안전하게 생성하는 방법
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - Spring
-  - Builder
-  - JPA
+  - Guide
 date: 2019-05-05 03:58:00
 subtitle:
 thumbnail:

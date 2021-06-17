@@ -5,9 +5,7 @@ subtitle: Swagger Tip
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - Swagger
   - Spring
-  - Document
 date: 2018-05-03 00:00:00
 thumbnail:
 ---

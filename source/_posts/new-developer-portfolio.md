@@ -4,6 +4,8 @@ title: 신입 개발자 포트폴리오
 catalog: true
 date: 2016-12-12
 header-img: https://i.imgur.com/avC1Xor.jpg
+tags: 
+- Essay
 ---
 
  

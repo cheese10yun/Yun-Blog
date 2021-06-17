@@ -5,7 +5,6 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Rx Kotlin
-  - JPA
 date: 2020-12-05 23:05:25
 subtitle:
 ---

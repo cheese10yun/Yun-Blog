@@ -5,9 +5,8 @@ subtitle: Slice Test
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - Spring
-  - Test
-  - Slice Test
+- Spring
+- Test
 date: 2019-01-20 05:30:00
 thumbnail:
 ---

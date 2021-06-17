@@ -5,8 +5,7 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
-  - Transactional
-  - CGLIB
+  - Transaction
 date: 2020-08-12 00:00:00
 subtitle:
 ---

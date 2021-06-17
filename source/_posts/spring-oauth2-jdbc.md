@@ -7,7 +7,6 @@ header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
   - OAuth2
-  - TokenStore
 date: 2018-11-25 00:10:00
 ---
 

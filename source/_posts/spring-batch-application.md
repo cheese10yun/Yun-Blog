@@ -4,7 +4,7 @@ title: Spring Batch Application 개발하면서 나름의 고찰 정리
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - Spring Batch
+- Spring Batch
 date: 2021-02-11 00:00:00
 subtitle:
 ---

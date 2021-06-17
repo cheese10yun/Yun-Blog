@@ -6,7 +6,6 @@ catalog: true
 header-img: https://i.imgur.com/avC1Xor.jpg
 tags:
 - Node
-- Mysql
 ---
 
 

@@ -6,9 +6,10 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
-  - Actuator
 thumbnail: 'https://i.imgur.com/6xFlHcv.png'
 date: 2019-07-04 02:27:00
+tags:
+- Spring
 ---
 
 **해당 코드는 [Github](https://github.com/cheese10yun/blog-sample/tree/master/actuator)에 공개되어 있습니다.**
