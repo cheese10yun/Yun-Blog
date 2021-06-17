@@ -4,8 +4,6 @@ title: Spring Actuator 기초 설정
 subtitle: Actuator
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
-tags:
-  - Spring
 thumbnail: 'https://i.imgur.com/6xFlHcv.png'
 date: 2019-07-04 02:27:00
 tags:
