@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 동일한 Bean(Class)에서 @Transactional 동작 방식
+title: Spring 동일한 Bean(Class)에서 @Transactional 동작 방식
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Visual VM Launcher IntelliJ
+title: 인텔리제이 Visual VM Launcher
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:

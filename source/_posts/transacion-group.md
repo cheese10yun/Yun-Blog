@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 스프링 트랜잭션 단위
+title: Spring 트랜잭션 단위
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:

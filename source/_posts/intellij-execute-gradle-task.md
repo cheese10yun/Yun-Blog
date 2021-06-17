@@ -1,6 +1,6 @@
 ---
 layout: post
-title: IntelliJ Execute Gradle task로 Gradle를 쉽게 사용하자
+title: 인텔리제이 Execute Gradle task로 Gradle를 쉽게 사용하자
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
