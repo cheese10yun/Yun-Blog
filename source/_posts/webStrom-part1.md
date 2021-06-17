@@ -4,8 +4,6 @@ title: WebStorm 어디까지 써봤니? part 1
 date: 2016-12-18
 catalog: true
 header-img: https://i.imgur.com/avC1Xor.jpg
-tags:
-    - WebStorm
 ---
 
 안녕하세요 스타트업에서 근무하고 있는 신입 개발자입니다. 회사 내의 기술 스펙이 거의 자바스크립트를 기반으로 두고 있어 기존에 사용해왔던 IntelliJ에서 WebStrom으로 변경하게 되었습니다. 그래서 이번 기회에 Webstrom에 좀 더 친숙해지고 사용법을 읽힐 겸 간단하게 정리해봅니다.

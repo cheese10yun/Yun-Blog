@@ -5,7 +5,7 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
-  - RabbitMQ
+  - Event
 date: 2019-05-17 22:50:00
 subtitle:
 thumbnail:

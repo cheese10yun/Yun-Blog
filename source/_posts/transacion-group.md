@@ -4,7 +4,8 @@ title: 스프링 트랜잭션 단위
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - Transactions
+  - Transaction
+  - Spring
 date: 2019-11-23 00:00:00
 subtitle:
 ---

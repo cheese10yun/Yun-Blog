@@ -4,8 +4,6 @@ title: Utterances 적용하기
 subtitle:
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
-tags:
-  - Utterances
 date: 2019-08-31
 thumbnail:
 ---

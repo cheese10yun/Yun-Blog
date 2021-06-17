@@ -4,7 +4,7 @@ title: ApplicationEventPublisher 기반으로 강결합 및 트랜잭션 문제 
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - ApplicationEventPublisher
+  - Event
   - Transactional
 date: 2020-08-16 00:00:00
 subtitle:
