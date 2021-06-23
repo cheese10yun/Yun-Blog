@@ -229,7 +229,7 @@ B마켓의 지급 금액을 2,000 -> 3,000으로 변경해도 동일합니다. �
 
 READ COMMITTED 격리 수준에서는 트랜잭션 내에서 실행되는 SELECT 문장과 트랜잭션 외부에서 실행되는 SELECT 문장의 차이가 없습니다. **하지만 REPEATABLE READ 격리 수준에서는 기본적으로 SELECT 쿼리 문장도 트랜잭션 범위 내에서만 작동해야 합니다. 즉, `BEGEN TRANSACTION`으로 트랜잭션을 시작한 상태에서 온종일 동일한 쿼리를 반복해서 실행해봐도 동일한 결과를 보장받습니다. 아무리 다른 트랜잭션에서 그 데이터를 변경하고자 COMMIT을 실행한다 하더라도 동일한 결과를 응답받습니다.**
 
-#### REPEATABLE READ
+### REPEATABLE READ
 
 REPEATABLE READ는 MySQL의 InnoDB 스토리지 엔진에서 기본적으로 사용되는 격리 수준입니다. 이 격리 수준에서는 READ COMMITED 격리 수준에서 발생하는 NON-REPEATABLE READ 문제가 발생하지 않습니다. **InnoDB 스토리지 엔진은 트랜잭션이 ROLLBACK될 가능성에 대비해 변경되기 전 레코드를 언두 공간에 백업해두고 실제 레코드 값을 변경하며 이러한 변경 방식을 MVCC라고 합니다.** REPEATABLE READ와 READ COMMITTED의 차이는 언두 영역에 백업된 레코드의 여러 버전 가운데 몇 번째 이전 버전까지 찾아 들어가야 하는지에 있는 것입니다.
 
