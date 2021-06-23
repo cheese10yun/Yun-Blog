@@ -255,4 +255,4 @@ MySQL을 사용한다면 기본적으로 격리 레벨이 REPEATABLE READ 이긴
 
 ## 참고
 * [자바 ORM 표준 JPA 프로그래밍 ](http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788960777330)
-* [Real MySQL](http://www.yes24.com/Product/Goods/6960931)
+* [Real MySQL](http://www.yes24.com/Product/Goods/6960931) ISOLATION 설명은 해당 도서를 참고했습니다.
