@@ -7,7 +7,7 @@ date: 2021-06-24
 subtitle: 
 tags:
 - JPA
-- Isolation
+- Database
 ---
 
 ## JPQL 조회 방식
