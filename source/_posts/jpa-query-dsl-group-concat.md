@@ -145,3 +145,7 @@ show variables like 'group_concat_max_len';
 
 ## 정리
 `group_concat`을 사용하는 방법을 정리하긴 했지만 가능하면 사용하는 것을 권장하지 않습니다. JPA 연관관계를 통해서 가져오는 것이 더 선호하며 `group_concat` 정도는 괜찮지만 SQL에 함수에 너무 의존적인 코드를 작성하는 것은 지양하는 것이 좋다고 생각합니다.
+
+
+## 참고
+* [Spring Cloud Config Reference](https://cloud.spring.io/spring-cloud-config/reference/html/)
