@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Spring Config Server 정리
+title: Spring Cloud Config Server 정리
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
   - MSA
 date: 2021-07-30
-subtitle:
+subtitle: Config Server를 활용 설정파일 중앙화
 ---
 
 > 해당 코드는 [Github](https://github.com/cheese10yun/blog-sample/tree/master/spring-msa)에서 확인할 수 있습니다.
