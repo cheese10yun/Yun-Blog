@@ -323,6 +323,8 @@ $ docker-compose up -d
 ```
 위 처럼 카프카 도커를 구성해서 도커를 구동시킵니다.
 
+### 카프카 이벤트로 변경사항 전파
+
 ```yml
 # application.yml
 spring:
@@ -423,3 +425,29 @@ Response code: 200; Time: 151ms; Content length: 5 bytes
 
 ```
 **59013 서버에 이벤트를 반영했지만 58704 서버에도 해당 내용이 전파된 것을 확인할 수 있습니다.**
+
+### 이벤트 확인
+
+![](https://raw.githubusercontent.com/cheese10yun/blog-sample/master/spring-msa/docs/images/kafka-log.png)
+
+![](https://raw.githubusercontent.com/cheese10yun/blog-sample/master/spring-msa/docs/images/kafka-matric.png)
+
+카프카 로그를 보면 정상적으로 이벤트가 발행된 부분을 확인할 수 있으며, 위에서 지정한 토픽 이름인 `${spring.application.name}config-bus-refesh-event`을 확인할 수 있습니다.
+
+`@EventListener` 으로 `RefreshRemoteApplicationEvent` 이벤트를 코드레벨에서 구독 받을 수 있습니다.
+
+```kotlin
+@EventListener
+fun onRefreshRemoteEvent(event: RefreshRemoteApplicationEvent) {
+    log.info("Event....")
+    log.info(event.id)
+    log.info(event.source.toString())
+    log.info(event.originService)
+    log.info(event.destinationService)
+    log.info("Event....")
+}
+```
+
+![](https://raw.githubusercontent.com/cheese10yun/blog-sample/master/spring-msa/docs/images/bus-event.png)
+
+디버깅 모드로 실제 값들을 확인할 수 있습니다.
