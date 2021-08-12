@@ -7,6 +7,7 @@ header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
   - MSA
+  - Kafka
 date: 2021-08-07 00:00:00
 ---
 
