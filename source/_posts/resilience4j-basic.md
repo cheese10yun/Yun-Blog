@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resilience4j를 이용한 서킷 브레이커 기초 설정
+title: Resilience4j를 이용한 서킷 브레이커 기초
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
