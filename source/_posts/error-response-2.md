@@ -96,9 +96,9 @@ class UserClient(
             .response()
 }
 ```
-a-service -> b-service 호출을 한다고 가정했을 경우 b-service에서 HTTP Status가 2xx가 아닌 경우, 특히 4xx가 발생하는 경우 요청한 여려의 필드 중에 1개 이상의 오류가 있는 경우가 빈번하게 있기 때문에 b-service의 Error 응답을 그대로 전달해 줘야 하는 경우가 있습니다.
+a-service -> b-service 호출을 한다고 가정했을 경우 b-service에서 HTTP Status가 2xx가 아닌 경우, 특히 4xx가 발생하는 경우로 요청한 여려의 필드 중에 1개 이상의 오류가 있는 경우가 빈번하게 있기 때문에 b-service의 Error 응답을 그대로 전달해 줘야 하는 경우가 있습니다.
 
-그런데 문제가 있습니다. 서비스 로직에서 b-service에서 발생한 Error 응답을 그대로 클라이언트에게 전달할 수 있을까요? [Spring Guide - Exception 전략](https://cheese10yun.github.io/spring-guide-exception/)에서 사용한 `@ControllerAdvice`을 통해서 예외를 핸들링을 진행해 보겠습니다.
+그런데 문제가 있습니다. 서비스 로직에서 b-service에서 발생한 Error 응답을 그대로 클라이언트에게 전달하기가 어렵습니다. 이 문제를 [Spring Guide - Exception 전략](https://cheese10yun.github.io/spring-guide-exception/)에서 사용한 `@ControllerAdvice`을 통해서 예외를 핸들링을 통해서 해결해 보겠습니다.
 
 ## 발생한 Error 응답을 그대로 전달 하기
 
