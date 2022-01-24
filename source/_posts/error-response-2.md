@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Error Response 서버로 전달하기
+title: MSA 환경에서 Error Response 서버로 전달하기
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 date: 2022-01-23
