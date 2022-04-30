@@ -89,7 +89,7 @@ class BookReservationService2() {
 
     fun doReservation(bookId: Long, userId: Long) {
 
-        val boo = bookClient.getBook(bookId)
+        val book = bookClient.getBook(bookId)
 
         val bookReservation = BookReservation(
             bookId = boo.id,
@@ -208,7 +208,7 @@ class BookReservationService3(
 
 
 class BookClient(
-    private val host: String = "http://book-service.copm",
+    private val host: String = "http://book-service.com",
     private val objectMapper: ObjectMapper
 ) {
 
@@ -271,8 +271,7 @@ class BookClient(
                     }
                 )
             }
-}
-
+    }
 }
 ```
 
@@ -378,4 +377,3 @@ class BookClientRegistrationService() {
 }
 ```
 그런 경우에는 이렇게 HTTP Client를 한 번 더 감싸 BookClientRegistrationService라는 서비스 영역에서 비즈니스 요구사항에 맞는 책임을 부여하는 것이 적절해 보입니다. 하지만 단순하게 null, empty 검증 정도로 단순한 검증이라면 서비스 영역을 별도로 만들지는 않을 거 같습니다.
-
