@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sleuth 분산 환경 트래킹 With Fuel
-date: Invalid date
+date: 2022-05-28
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
