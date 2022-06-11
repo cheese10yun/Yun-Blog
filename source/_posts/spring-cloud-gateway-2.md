@@ -3,10 +3,11 @@ layout: post
 title: Spring Cloud Gateway Error Handling & Filter
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
-date: 2022-06-11
-subtitle:
 tags: Spring Gateway
+date: 2022-06-11 00:00:00
+subtitle:
 ---
+
 
 Spring Cloud Gateway를 활용하여 여러 API를 서비싱 하는 경우 해당 API들은 이전에 포스팅한 [Spring Guide - Exception 전략](https://cheese10yun.github.io/spring-guide-exception/)으로 통일된 Error Response를 갖게 할 수 있습니다. 하지만 게이트웨이 내부에서 발생한 예외에 대한 Error Response를 핸들링하지 않게 되는 경우는 통일된 메시지를 갖지 못하게 됩니다. 예를 들어 해당 리소스를 찾을 수 없는 예외의 경우 아래와 같이 응답됩니다.
 
@@ -22,8 +23,7 @@ content-length: 0
 Response code: 404 (Not Found); Time: 145ms; Content length: 0 bytes
 ```
 
-라우팅 되는 서비스 API와는 Error Response 형식이 맞지 않아 문제가 발생할 수 있습니다. 최종적으로는 아래와 같은 형식으로 라우팅하는 서비스 API와 통일된 Error Response를 내려주는 전략에 대한 내용을 정리해 보았습니다.
-
+라우팅 되는 서비스 API와는 Error Response 형식이 맞지 않아 문제가 발생할 수 있습니다. 최종적으로 아래와 같이 라우팅하는 서비스 API와 통일된 Error Response를 내려주는 전략에 대한 내용을 정리해보았습니다.
 
 ```
 http://localhost:5555/ASDASD
