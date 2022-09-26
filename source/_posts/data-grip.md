@@ -4,9 +4,10 @@ title: DataGrip 살펴 보기
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags: Tool
-date: 2022-09-26
-subtitle: 
+date: 2022-09-26 00:00:00
+subtitle:
 ---
+
 
 DataGrip은 JetBrains에서 만든 데이터베이스 및 SQL 용 크로스 플랫폼 IDE입니다. 자세한 소개는 [DataGrip](https://www.jetbrains.com/ko-kr/datagrip/)에서 확인 가능합니다.
 
