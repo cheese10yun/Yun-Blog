@@ -3,12 +3,12 @@ layout: post
 title: MySQL Batch Update 성능 측정 및 분석
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
-tags: 
- - Batch
- - Exposed
- - JPA
-date: 2022-11-07 00:00:00
-subtitle:
+tags:
+- Batch
+- Exposed
+- JPA
+  date: 2022-11-07 00:00:00
+  subtitle:
 ---
 
 MySQL 기반으로 대량 업데이트를 진행하는 경우 JPA, Exposed 프레임워크 기반으로 테스트를 진행했습니다. 결론부터 말씀드리면 Exposed 기반 Batch Update가 가장 빨랐습니다. 물론 JPA에서도 addBatch 방식을 진행하면 유의미한 속도 차이는 없을 것 같아 보이나 Exposed가 addBatch 기능을 직관적으로 지원하고 있어 addBatch 방식은 Exposed를 사용했으며 JPA는 영속성 컨텍스트 기반인 Dirty Checking Update, 영속성 컨텍스트가 필요 없는 ID 기반 업데이트를 진행했습니다.
@@ -21,10 +21,10 @@ MySQL 기반으로 대량 업데이트를 진행하는 경우 JPA, Exposed 프�
 @Entity
 @Table(name = "writer")
 class Writer(
-    @Column(name = "name", nullable = false)
-    var name: String,
-    @Column(name = "email", nullable = false)
-    var email: String,
+        @Column(name = "name", nullable = false)
+        var name: String,
+        @Column(name = "email", nullable = false)
+        var email: String,
 ) {
 
     @Id
@@ -44,7 +44,7 @@ class Writer(
 }
 
 internal class WriterTest(
-    private val writerService: WriterService
+        private val writerService: WriterService
 ) : SpringBootTestSupport() {
 
     @Test
@@ -53,8 +53,8 @@ internal class WriterTest(
         val total = 500
         val map = (1..total).map {
             Writer(
-                name = "old",
-                email = "old"
+                    name = "old",
+                    email = "old"
             )
         }
         // 데이터 셋업, 속도 측정 포함 X
@@ -77,8 +77,8 @@ internal class WriterTest(
         val total = 500
         val map = (1..total).map {
             Writer(
-                name = "old",
-                email = "old"
+                    name = "old",
+                    email = "old"
             )
         }
         // 데이터 셋업, 속도 측정 포함 X
@@ -103,9 +103,9 @@ class WriterCustomRepositoryImpl : QuerydslCustomRepositorySupport(Writer::class
     override fun update(ids: List<Long>) {
         for (id in ids) {
             update(qWriter)
-                .set(qWriter.name, "update")
-                .where(qWriter.id.eq(id))
-                .execute()
+                    .set(qWriter.name, "update")
+                    .where(qWriter.id.eq(id))
+                    .execute()
         }
     }
 }
@@ -117,7 +117,7 @@ JPA에서는 Persistence Context 기반인 Dirty Checking을 통한 업데이트
 
 ```kotlin
 class BatchInsertServiceTest(
-    ...
+        ...
 ) : ExposedTestSupport() {
 
     @Test
@@ -133,10 +133,10 @@ class BatchInsertServiceTest(
         stopWatch.start()
         for (writerId in ids) {
             Writers
-                .update({ Writers.id eq writerId })
-                {
-                    it[email] = "update"
-                }
+                    .update({ Writers.id eq writerId })
+                    {
+                        it[email] = "update"
+                    }
         }
         stopWatch.stop()
         println("${ids.size} update, ${stopWatch.lastTaskTimeMillis}")
@@ -159,7 +159,7 @@ class BatchInsertServiceTest(
                 this[Writers.email] = "update"
             }
         }
-            .execute(TransactionManager.current())
+                .execute(TransactionManager.current())
 
         stopWatch.stop()
         println("${ids.size} update, ${stopWatch.lastTaskTimeMillis}")
