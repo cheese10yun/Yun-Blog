@@ -7,8 +7,8 @@ tags:
 - Batch
 - Exposed
 - JPA
-  date: 2022-11-07 00:00:00
-  subtitle:
+date: 2022-11-07 00:00:00
+subtitle: JPA, Exposed 대량 업데이트 처리
 ---
 
 MySQL 기반으로 대량 업데이트를 진행하는 경우 JPA, Exposed 프레임워크 기반으로 테스트를 진행했습니다. 결론부터 말씀드리면 Exposed 기반 Batch Update가 가장 빨랐습니다. 물론 JPA에서도 addBatch 방식을 진행하면 유의미한 속도 차이는 없을 것 같아 보이나 Exposed가 addBatch 기능을 직관적으로 지원하고 있어 addBatch 방식은 Exposed를 사용했으며 JPA는 영속성 컨텍스트 기반인 Dirty Checking Update, 영속성 컨텍스트가 필요 없는 ID 기반 업데이트를 진행했습니다.
