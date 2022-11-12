@@ -3,14 +3,14 @@ layout: post
 title: Spring Batch 업데이트 성능 최적화 및 분석
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
+tags:
+  - Performance
+  - Spring Batch
+  - JPA
 date: 2022-11-12 23:41:19
 subtitle:
-tags:
-- Performance
-- Spring Batch
-- JPA
-
 ---
+
 
 
 아래와 같은 시나리오의 경우 배치 애플리케이션 성능을 높이기 위한 방법에 대한 내용을 정리했습니다.
@@ -117,7 +117,7 @@ class UpdatePerformanceJobConfiguration(
 }
 ```
 
-JpaCursorItemReader 기반으로 리더로 지정했습니다. 모두 성능 측정에서 동일한 리더를 사용했습니다. **JPA를 사용한다면 배치 애플리케이션에는 대량 처리 시 Entity 객체를 리턴하는 것이 아니라 Projections 객체를 리턴하는 것을 권장합니다.** JPA에서 지원해 주는 Dirty Checking 기반으로 업데이트를 진행할 이는 거의 없으며, 있더라도 merger 기능이 동작할 때 select 쿼리가 한 번 더 발생할 위험도 있으며 Lazy Loading으로 추가 조회를 하는 경우도 거의 없습니다. 무엇보다도 처리할 데이터 rows가 많고 해당 테이블에 칼럼이 맞은 경우 JPA에서 이전에 언급한 기능들 및 다른 기타 기능들을 사용하기 위해서 더 많은 메모리를 사용하게 되기 때문에 가능하면 Projections 객체를 리턴하는 것이 효율 적입니다.
+JpaCursorItemReader 기반으로 리더로 지정했습니다. 성능 측정에서 모두 동일한 리더를 사용했습니다. **JPA를 사용한다면 배치 애플리케이션에는 대량 처리 시 Entity 객체를 리턴하는 것이 아니라 Projections 객체를 리턴하는 것을 권장합니다.** JPA에서 지원해 주는 Dirty Checking 기반으로 업데이트를 진행할 이는 거의 없으며, 있더라도 merger 기능이 동작할 때 select 쿼리가 한 번 더 발생할 위험도 있으며 Lazy Loading으로 추가 조회를 하는 경우도 거의 없습니다. 무엇보다도 처리할 데이터 rows가 많고 해당 테이블에 칼럼이 맞은 경우 JPA에서 이전에 언급한 기능들 및 다른 기타 기능들을 사용하기 위해서 더 많은 메모리를 사용하게 되기 때문에 가능하면 Projections 객체를 리턴하는 것이 효율 적입니다.
 
 CursorItemReader와 Reader에 대한 성능 분석은 [Spring Batch Reader 성능 분석 및 측정 part 1](https://cheese10yun.github.io/spring-batch-reader-performance/), [Spring Batch Reader 성능 분석 및 측정 part 2](https://cheese10yun.github.io/spring-batch-reader-performance-2/)를 참고해 주세요. 본 포스팅에서는 Reader에 대해서는 깊게 다루지 않겠습니다.
 
