@@ -3,12 +3,13 @@ layout: post
 title: IntelliJ 자주 사용하는 기능 정리
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
-date: 2023-06-04
-subtitle:
 tags:
-- IDEA
-- IntelliJ
+  - IDEA
+  - IntelliJ
+date: 2023-06-04 00:00:00
+subtitle:
 ---
+
 
 ## Tab
 
@@ -79,14 +80,14 @@ tags:
 fun asd(): Unit {
     //@formatter:off
     val a = 10
-        val b = 10
+        val b = 10 // 코드 정렬에서 제외
         val c = 10
         val d = 10
     val e = 10
     val f = 10
     //@formatter:on
 }
-``` 
+```
 * 특정한 이유로 코드 정렬을 제외하고 싶을 때 `@formatter:off ~ @formatter:on`을 활용하여 제외할 수 있다.
 
 ### Gradle Task
