@@ -12,6 +12,8 @@ date: 2023-06-12
 subtitle:
 ---
 
+# 좋은 코드 설계를 위한 답없는 고민들
+
 좋은 코드 설계를 위한 고민들을 평소에 많이 해왔고, 그에 관련한 학습들도 진행했었다. OOP, DDD, Clean Code, Clean Architecture 등등을 통해서 나름의 주관이 생겼으며 경력 초반에는 이런 것들을 지키기 위해 많이 노력해왔다. 현재는 이런 개념들을 선택적으로 적용하며 또 어떠한 의미에서는 이런 것들을 지키는 것들에 대해서 가성비가 좋지 않다고까지 생각한다. 해당 포스팅에서 작성한 내용은 개발하면서 코드 설계적인 부분에 대해서 아직까지 고민을 하고 있는 부분들에 대해서 정리한 것들이다. 만약 Spring, JPA, Kotlin을 통해서 프로젝트를 진행하고 있다면 공감이 될 수 있다.
 
 ## 복잡도를 어디서 제어(책임)할 것인가?
@@ -264,44 +266,36 @@ class Member(
 ) : EntityAuditing() {
 
     @Column(name = "first_name", nullable = false)
-    var firstName: String = ""
+    var firstName: String = firstName
         protected set
     @Column(name = "last_name", nullable = false)
-    var lastName: String = ""
+    var lastName: String = lastName
         protected set
     @Column(name = "phone_number", nullable = false)
-    var phoneNumber: String = ""
+    var phoneNumber: String = phoneNumber
         protected set
     @Column(name = "address", nullable = false)
-    var address: String = ""
+    var address: String = address
         protected set
     @Column(name = "age", nullable = false)
-    var age: Int = 0
+    var age: Int =age
         protected set
     @Column(name = "gender", nullable = false)
-    var gender: String = ""
+    var gender: String = gender
         protected set
     @Column(name = "occupation", nullable = false)
-    var occupation: String = ""
+    var occupation: String = occupation
         protected set
     @Column(name = "resident_registration_number", nullable = false)
-    var residentRegistrationNumber: String? = null
+    var residentRegistrationNumber: String? = residentRegistrationNumber
         protected set
 
     @Enumerated(EnumType.STRING)
-    var status: MemberStatus = MemberStatus.NORMAL
+    var status: MemberStatus = status
+        protected set
 
     init {
         // 필요하다면 유효성 체크, 기타 로직 수행 등등 진행
-        this.firstName = firstName
-        this.lastName = lastName
-        this.phoneNumber = phoneNumber
-        this.address = address
-        this.age = age
-        this.gender = gender
-        this.occupation = occupation
-        this.residentRegistrationNumber = residentRegistrationNumber
-        this.status = status
     }
 }
 
@@ -367,9 +361,9 @@ class Member(
 
 
 class MemberRepositoryImpl(
-  private val query: JPAQueryFactory,
+    private val query: JPAQueryFactory,
 ) : MemberRepositoryCustom {
-    
+
     // 성인 Member 조회
     override fun findBy(age: Int): List<Member> = query
         .selectFrom(member)
@@ -422,7 +416,7 @@ interface GeneralMember {
     val email: String
     val firstName: String
     val lastName: String
-    
+
     // 공통 로직을 작성
     fun fullName(): String {
         return "$firstName $lastName"
@@ -455,4 +449,4 @@ Member라는 공통 교집합에는 이름, 이메일, 주소 세 가지 필드�
 
 ## 마무리
 
-복잡도를 제어하고 유지 보수하기 좋은 코드 디자인을 갖기 위해 학습했던 것들을 실제 적용하면서 만났던 현실적인 문제들을 정리해 보았다. 이런 것들을 학습할 때는 모든 문제를 해결해 줄 것처럼 느껴지지만 결국 은 탄환은 없으며 개발이라는 것은 트레이드오프이며 무언가를 얻으면 반드시 무언가를 어느 정도는 손해 볼 수밖에 없다. 이런 것들을 철저히 지키고 있다면 얻는 것은 무엇이며 그것으로 필연적으로 잃어버리는 것은 무엇인지 고민을 많은 개발자들이 해봤으면 한다.    
+복잡도를 제어하고 유지 보수하기 좋은 코드 디자인을 갖기 위해 학습했던 것들을 실제 적용하면서 만났던 현실적인 문제들을 정리해 보았다. 이런 것들을 학습할 때는 모든 문제를 해결해 줄 것처럼 느껴지지만 결국 은 탄환은 없으며 개발이라는 것은 트레이드오프이며 무언가를 얻으면 반드시 무언가를 어느 정도는 손해 볼 수밖에 없다. 이런 것들을 철저히 지키고 있다면 얻는 것은 무엇이며 그것으로 필연적으로 잃어버리는 것은 무엇인지 고민을 많은 개발자들이 해봤으면 한다.     
