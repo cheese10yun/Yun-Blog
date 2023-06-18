@@ -423,7 +423,7 @@ public final class SampleRequestBody {
 해당 블로그의 내용을 정리하면 다음과 같습니다.
 
 1. `@JsonProperty("ip")` 방식([Jackson Deserialization Annotations: @JsonCreator 참고](https://github.com/cheese10yun/blog-sample/tree/master/jackson)) 같은 방식으로 생성자 파라미터와, json 필드명이 일치한다면 따로 속성을 지정하지 않아도 가져올 수 있음
-2. `JDK 8` 이전까지는 Reflection만으로는 파라미터 이름을 가져올 수 없었으나 `JDK 8` 이상의 경우 컴퍼일 할 때 `-parameters` 옵션을 붙이면 Reflection API로 파라미터 정보를 가져올 수 있습니다.
+2. `JDK 8` 이전까지는 Reflection만으로는 파라미터 이름을 가져올 수 없었으나 `JDK 8` 이상의 경우 컴파일 할 때 `-parameters` 옵션을 붙이면 Reflection API로 파라미터 정보를 가져올 수 있습니다.
 3. Spring Boot Gradle Plugin 플러그인에서 Java 컴파일의 `-parameters` 옵션을 자동으로 추가됩니다.
 
 
