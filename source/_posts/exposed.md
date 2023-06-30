@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 코틀린 기반 경량 ORM Exposed
+title: Kotlin 기반 경량 ORM Exposed
 subtitle: Jetbrains Kotlin ORM Exposed 
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'

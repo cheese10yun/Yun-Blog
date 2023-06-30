@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 코틀린 groupBy, groupingBy, chunked, flatMap, aggregate 정리
+title: Kotlin groupBy, groupingBy, chunked, flatMap, aggregate 정리
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 date: 2022-12-11 19:14:31
