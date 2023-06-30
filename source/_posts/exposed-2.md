@@ -1,12 +1,13 @@
 ---
 layout: post
-title: Exposed 추가 정리
+title: 코틀린 기반 경량 ORM Exposed 추가 정리
 date: 2022-05-30
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
 - Exposed
 - ORM
+- Kotlin
 ---
 
 이전 포스팅 [Exposed: 경량 ORM](https://cheese10yun.github.io/exposed/)에서 소개한 적이 있습니다. 이번에는 실제 자주 사용하는 기능들 위주로 다루어 보겠습니다.
