@@ -1,11 +1,13 @@
 ---
 layout: post
-title: Exposed
-subtitle: 경량 ORM
+title: 코틀린 기반 경량 ORM Exposed
+subtitle: Jetbrains Kotlin ORM Exposed 
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Exposed
+  - ORM
+  - Kotlin
 date: 2021-05-20 01:38:18
 ---
 
