@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Kotlin 기반 경량 ORM Exposed 추가 정리
+title: Kotlin 기반 경량 ORM Exposed 추가 정리 part 1
 date: 2022-05-30
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
