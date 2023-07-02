@@ -15,6 +15,7 @@ subtitle:
 
 * [Kotlin 기반 경량 ORM Exposed](https://cheese10yun.github.io/exposed/)
 * [Kotlin 기반 경량 ORM Exposed 추가 정리 part 2](https://cheese10yun.github.io/exposed-2/)
+* [Kotlin 기반 경량 ORM Exposed 추가 정리 part 3](https://cheese10yun.github.io/exposed-3/)
 
 ## VarCharColumnType 기반 Converter
 
