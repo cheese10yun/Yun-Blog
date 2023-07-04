@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Junit5
+title: Junit5 특징 소개
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
