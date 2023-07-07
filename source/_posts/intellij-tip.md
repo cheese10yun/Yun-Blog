@@ -158,6 +158,13 @@ fun asd(): Unit {
 [Presentation Assistant](https://plugins.jetbrains.com/plugin/7345-presentation-assistant)는 사용하는 단축키와 기능 명을 디스플레이 해주는 플러그인
 
 
+### Kotlin Fill Class
+
+![](https://user-images.githubusercontent.com/8841470/59397528-e61a4380-8dc7-11e9-9684-d82d225316fe.gif)
+
+[Kotlin Fill Class](https://plugins.jetbrains.com/plugin/10942-kotlin-fill-class)는 코틀린 생성자 네임드 파라미터 기반으로 생성을 도와주는 플러그인
+
+
 ### 플러그인 찾는 방법
 
 ![](https://raw.githubusercontent.com/cheese10yun/blog-sample/master/intellij-test/intellij-test/images/tip-15.png)
