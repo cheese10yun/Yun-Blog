@@ -1,6 +1,6 @@
 ---
 layout: post
-title: IntelliJ 자주 사용하는 기능 정리
+title: IntelliJ 자주 사용하는 기능 및 추천 플러그인 정리
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
