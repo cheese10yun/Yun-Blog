@@ -160,14 +160,16 @@ fun asd(): Unit {
 
 ### Kotlin Fill Class
 
-![](https://user-images.githubusercontent.com/8841470/59397528-e61a4380-8dc7-11e9-9684-d82d225316fe.gif)
+> ![](https://user-images.githubusercontent.com/8841470/59397528-e61a4380-8dc7-11e9-9684-d82d225316fe.gif)
+> 출처 [Kotlin Fill Class](https://plugins.jetbrains.com/plugin/10942-kotlin-fill-class)
 
 [Kotlin Fill Class](https://plugins.jetbrains.com/plugin/10942-kotlin-fill-class)는 코틀린 생성자 네임드 파라미터 기반으로 생성을 도와주는 플러그인
 
 
 ### Inspection Lens
 
-![](https://plugins.jetbrains.com/files/19678/screenshot_fdccbd0c-626e-4502-8622-71931e8b8fef)
+> ![](https://plugins.jetbrains.com/files/19678/screenshot_fdccbd0c-626e-4502-8622-71931e8b8fef)
+> 출처 [Inspection Lens](https://plugins.jetbrains.com/plugin/19678-inspection-lens)
 
 [Inspection Lens](https://plugins.jetbrains.com/plugin/19678-inspection-lens)는 오류, 경고 및 기타 검사 하이라이트를 인라인으로 표시해 주는 플러그인
 
