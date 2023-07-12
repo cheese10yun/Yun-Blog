@@ -6,6 +6,7 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - IntelliJ
+  - Jetbrains
 date: 2019-05-26 19:25:00
 ---
 

@@ -5,7 +5,8 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - JPA
-  - 성능
+  - ORM
+  - Performance
 date: 2020-02-01 00:00:00
 subtitle:
 ---

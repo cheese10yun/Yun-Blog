@@ -5,6 +5,7 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - IntelliJ
+  - Jetbrains
 date: 2020-07-18 00:00:00
 subtitle:
 ---

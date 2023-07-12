@@ -5,6 +5,7 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - JPA
+  - ORM
   - Querydsl
 date: 2020-02-29 00:00:00
 subtitle:

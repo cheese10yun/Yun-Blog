@@ -6,6 +6,8 @@ catalog: true
 header-img: https://i.imgur.com/avC1Xor.jpg
 tags:
   - IntelliJ
+  - Jetbrains
+  - Refactoring
 date: 2018-03-11 00:00:00
 ---
 

@@ -8,6 +8,7 @@ subtitle:
 tags:
     - JPA
     - Querydsl
+    - ORM
 ---
 
 

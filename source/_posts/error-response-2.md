@@ -6,7 +6,8 @@ header-img: 'https://i.imgur.com/avC1Xor.jpg'
 date: 2022-01-23
 subtitle:
 tags:
-- Spring
+- MSA
+- Guide
 ---
 
 > 해당 코드는 [Github](https://github.com/cheese10yun/blog-sample/tree/master/msa-error-response) 공개되어 있습니다.

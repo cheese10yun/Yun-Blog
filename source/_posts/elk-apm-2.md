@@ -4,8 +4,9 @@ title: Elasticsearch APM 분산 트랜잭션 추적
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - ELK
-  - 모니터링
+    - ELK
+    - Monitoring
+    - APM
 date: 2022-02-23 00:00:00
 subtitle:
 ---

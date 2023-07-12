@@ -8,6 +8,7 @@ thumbnail:
 date: 2018-03-29
 tags:
   - JPA
+  - ORM
 ---
 
 ## Embedded Type

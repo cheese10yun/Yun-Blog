@@ -7,6 +7,7 @@ subtitle:
 header-img: https://i.imgur.com/avC1Xor.jpg
 tags:
 - IntelliJ
+- Jetbrains
 ---
 
 이미 많은 분들이 빌더 패턴 관련해서 포스팅을 잘 정리해주셔서 빌더 패턴에 대해서 설명 해주기 보다는 인텔리제이 플러그인을 활용해서 좀 쉽게 사용할 수 있는 팁을 포스팅을 해보겠습니다.

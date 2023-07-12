@@ -6,7 +6,9 @@ header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
 - Batch
 - Exposed
+- Performance
 - JPA
+- ORM
 date: 2022-11-07 00:00:00
 subtitle: JPA, Exposed 대량 업데이트 처리
 ---

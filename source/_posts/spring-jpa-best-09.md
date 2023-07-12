@@ -7,6 +7,7 @@ header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
   - JPA
+  - ORM
   - Guide
 date: 2018-07-17 00:00:00
 thumbnail:

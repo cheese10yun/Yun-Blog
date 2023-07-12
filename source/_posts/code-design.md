@@ -5,9 +5,11 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - JPA
+  - ORM
   - Spring
   - Kotlin
   - OOP
+  - Guide
 date: 2023-06-12
 subtitle:
 ---

@@ -5,7 +5,7 @@ date: 2022-05-28
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-- Sleuth
+- MSA
 ---
 
 [Spring Cloud Sleuth](https://github.com/spring-cloud/spring-cloud-sleuth)는 분산 환경에서 일련의 Request에 대한 상관관계를 표시하여 서비스 간 호출에 대한 추적을 지원해 주는 모듈입니다. Sleuth는 RestTemplate, Feign, WebClient와 같은 스프링 진형의 HTTP Client 모듈을 사용하는 경우 Sleuth 의존성을 추가하는 것으로도 설정이 자동적으로 동작하게 됩니다. 하지만 다른 HTTP Client 모듈을 사용한다면 해당 설정을 수동으로 진행 햐아 하는데요. 이번 포스팅에서는 코틀린 기반의 [Fuel](https://github.com/kittinunf/fuel) HTTP Client 모듈에 Sleuth를 연동하는 방법을 다루어보겠습니다.

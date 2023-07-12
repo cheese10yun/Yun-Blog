@@ -7,7 +7,7 @@ date: 2021-12-11
 subtitle:
 tags:
   - IntelliJ
-  - Plugins
+  - Jetbrains
 ---
 
 [String Manipulation Plugin](https://plugins.jetbrains.com/plugin/2162-string-manipulation/)에 사용법에 대한 포스팅입니다.

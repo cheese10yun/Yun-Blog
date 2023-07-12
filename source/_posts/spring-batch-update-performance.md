@@ -7,6 +7,7 @@ tags:
   - Performance
   - Spring Batch
   - JPA
+  - ORM
 date: 2022-11-12 23:41:19
 subtitle:
 ---

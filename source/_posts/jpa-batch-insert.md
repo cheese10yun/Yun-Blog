@@ -5,7 +5,9 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
 - JPA
-- 성능
+- ORM
+- Performance
+- Batch Insert
 date: 2021-02-22 00:00:00
 subtitle:
 ---

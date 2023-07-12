@@ -7,7 +7,7 @@ date: 2021-06-05 15:41:45
 subtitle: JpaPagingItemReader, QueryDslNoOffsetPagingReader 측정 및 분석
 tags:
 - Spring Batch
-- 성능
+- Performance
 ---
 
 스프링 배치 애플리케이션에서 데이터베이스의 대량의 데이터를 처리할 때 Reader에 대한 성능 분석과 성능에 대한 측정을 정리한 포스팅입니다.

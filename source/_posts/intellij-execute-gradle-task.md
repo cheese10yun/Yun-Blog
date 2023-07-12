@@ -6,6 +6,7 @@ header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - IntelliJ
   - Gradle
+  - Jetbrains
 date: 2019-10-17 00:16:46
 subtitle:
 ---

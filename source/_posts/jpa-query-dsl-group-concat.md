@@ -6,6 +6,7 @@ header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Querydsl
   - JPA
+  - ORM
 date: 2020-06-13 15:11:42
 subtitle:
 ---

@@ -4,7 +4,7 @@ title: IntelliJ 자주 사용하는 기능 및 추천 플러그인 정리
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
-  - IDEA
+  - Jetbrains
   - IntelliJ
 date: 2023-06-04 00:00:00
 subtitle:

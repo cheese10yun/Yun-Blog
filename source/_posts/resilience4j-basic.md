@@ -5,7 +5,6 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - CircuitBreaker
-  - Resilience4j
   - MSA
 date: 2021-11-18 00:00:00
 subtitle:

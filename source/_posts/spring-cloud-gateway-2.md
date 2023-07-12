@@ -3,7 +3,10 @@ layout: post
 title: Spring Cloud Gateway Error Handling & Filter
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
-tags: Spring Gateway
+tags:
+  - Spring
+  - MSA
+  - Gateway
 date: 2022-06-11 00:00:00
 subtitle:
 ---

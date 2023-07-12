@@ -7,6 +7,7 @@ header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Spring
   - JPA
+  - ORM
   - Querydsl
   - Guide
 date: 2019-06-13 01:30:00

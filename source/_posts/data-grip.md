@@ -3,7 +3,8 @@ layout: post
 title: DataGrip 살펴 보기
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
-tags: Tool
+tags: 
+- Jetbrains
 date: 2022-09-26 00:00:00
 subtitle:
 ---

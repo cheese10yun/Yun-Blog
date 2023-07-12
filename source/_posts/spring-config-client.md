@@ -8,6 +8,7 @@ tags:
   - Spring
   - MSA
   - Kafka
+  - Event
 date: 2021-08-07 00:00:00
 ---
 

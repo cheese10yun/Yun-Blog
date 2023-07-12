@@ -5,6 +5,7 @@ catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
   - Test
+  - Guide
 date: 2022-10-10 00:00:00
 subtitle:
 ---
