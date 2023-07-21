@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  JPA JPQL의 조회 동작 살펴보기
+title:  Isolation Repeatable Read을 보장 하기 위한 JPA JPQL의 동작 원리
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 date: 2021-06-24
