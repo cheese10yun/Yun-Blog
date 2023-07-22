@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  Isolation Repeatable Read을 보장 하기 위한 JPA JPQL의 동작 원리
-catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 date: 2021-06-24
-subtitle: 
+subtitle: JPA로 살펴보는 Isolation 동작 방식
+catalog: true
 tags:
 - JPA
 - ORM
