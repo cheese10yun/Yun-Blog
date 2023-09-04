@@ -11,7 +11,6 @@ date: 2023-09-05 00:00:00
 subtitle:
 ---
 
-
 일반적으로 어드민 페이지와 같이 데이터를 테이블 뷰 형식으로 제공할 때, Paging 기법을 사용하여 현재 페이지의 내용과 페이지 정보를 표시합니다. JPA를 활용하면 이러한 반복적인 코드 작성을 보다 쉽게 처리할 수 있습니다.
 
 데이터 모수가 적고 단순한 구조로 데이터를 보여주는 경우라면 JPA에서 제공해 주는 방식으로 처리하는 것이 효율적일 수 있으나 데이터 모수가 많고 여러 테이블을 조인해서 표현해야 하는 데이터 구조라면 성능적인 이슈가 발생할 수 있습니다. 이러한 이슈와 성능 개선 방법에 대해 알아보겠습니다.
@@ -343,7 +342,11 @@ class OrderCustomRepositoryImpl : QuerydslCustomRepositorySupport(Order::class.j
         return SliceImpl(content, pageable, hasNext)
     }
 
-    override fun findSliceBy2(pageable: Pageable, address: String): Slice<Order> {
+    // Slice 로직 TO-BE
+    override fun findSliceBy(
+        pageable: Pageable, 
+        address: String
+    ): Slice<Order> {
         return applySlicePagination(
             pageable = pageable,
             query = {
