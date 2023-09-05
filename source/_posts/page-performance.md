@@ -38,7 +38,7 @@ class OrderCustomRepositoryImpl : QuerydslRepositorySupport(Order::class.java), 
 
 세부 구현체에서는 조회 로직을 살펴보겠습니다. 이 과정에서 Querydsl를 기반으로 JPAQuery를 생성하며 필요한 조회 조건을 작성합니다. 그런 다음 해당 쿼리 객체를 이용하여 Content 조회와 전체 레코드 수 조회를 수행합니다. 마지막으로 각각의 실제 쿼리를 확인하게 됩니다.
 
-```
+```sql
 select order0_.id           as id1_4_,
        ...
        order0_.address      as address4_4_,
