@@ -107,7 +107,7 @@ JPA Slice 방식은 Page 방식과는 다르게 Total Count를 조회하는 coun
 
 #### Slice 페이징 처리 방법
 
-Spring Data에서는 Total Count가 없는 형식의 페이징 처리를 지원하기 Slice를 지원해 주고 있습니다.
+Spring Data에서는 Slice를 통해 Total Count를 조회하지 않는 형태의 페이징 처리를 지원하고 있습니다.
 
 ```kotlin
 class OrderCustomRepositoryImpl : QuerydslRepositorySupport(Order::class.java), OrderCustomRepository {
@@ -159,7 +159,7 @@ Page 방식에서는 Total Count를 알고 있기 때문에 Content Size가 동�
 
 Total Count가 반드시 필요한 경우에는 Slice 방식을 사용할 수 없으므로 Page 방식을 사용해야 합니다. 또한, 위에서 언급한 대로 여러 테이블을 조인해서 복잡한 데이터를 조회하는 경우에는 Count 쿼리를 별도로 구현하는 것이 성능적인 이점을 가져올 수 있습니다.
 
-이는 AbstractJPAQuery의 `fetchCount()`가 Deprecated된 이유 중 하나입니다. 조인이 많거나 복잡한 쿼리에서 fetchCount를 사용하면 성능 저하가 발생할 수 있기 때문에 다른 방식으로 count 쿼리를 실행하도록 권장하고 있습니다.
+**이는 AbstractJPAQuery의 `fetchCount()`가 Deprecated된 이유 중 하나입니다.** 조인이 많거나 복잡한 쿼리에서 fetchCount를 사용하면 성능 저하가 발생할 수 있기 때문에 다른 방식으로 count 쿼리를 실행하도록 권장하고 있습니다.
 
 Count 쿼리를 별도로 구현하면 다음과 같이 구현할 수 있습니다.
 
@@ -212,7 +212,7 @@ Content 쿼리는 Content에 필요한 정보를 여러 테이블의 조인을 �
 
 ![](https://raw.githubusercontent.com/cheese10yun/blog-sample/master/query-dsl/docs/images/002.png)
 
-Count 쿼리가 1,000ms가 소요되고, 이후 Content 쿼리가 500ms 소요된다고 가정하면 총 1,500ms가 소요됩니다. 이 작업을 전체 데이터를 읽을 때마다 반복하면 성능상 문제가 발생할 수 있습니다. 그러나 이 두 작업은 서로 의존성이 없기 때문에 병렬로 처리할 수 있습니다.
+Count 쿼리가 1,000ms가 소요되고, 이후 Content 쿼리가 500ms 소요된다고 가정하면 총 1,500ms가 소요됩니다. 이 작업을 전체 데이터를 읽을 때마다 반복하면 성능상 문제가 발생할 수 있습니다. **그러나 이 두 작업은 서로 의존성이 없기 때문에 병렬로 처리할 수 있습니다.**
 
 ![](https://raw.githubusercontent.com/cheese10yun/blog-sample/master/query-dsl/docs/images/003.png)
 
