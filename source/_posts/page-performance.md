@@ -61,11 +61,11 @@ Querydsl의 applyPagination을 활용하면 페이징 조회 관련 로직을 �
 
 ### Count 쿼리의 성능 문제
 
-Count 쿼리는 특정 조건에 해당하는 전체 레코드 수를 조회하는 구조로, 데이터 총량이 증가하면 성능 저하가 발생할 수 있습니다. Content를 조회하는 limit 및 offset 쿼리는 빠르게 처리되는(offset 비교적 크지 않은 초반 구간) 반면 Count 쿼리는 시간이 오래 걸려 병목 현상이 발생할 수 있습니다. 또한, 여러 테이블을 조인하여 데이터를 조회하는 경우에는 조회 조건이 복잡해져 정확한 인덱스를 타겟팅하기 어려운 이슈가 발생할 수 있습니다. 이는 조회 조건에 부합하는 전체 레코드를 Count 하는 구조에서 필연적으로 발생할 수밖에 없는 문제입니다.
+Count 쿼리는 특정 조건에 해당하는 전체 레코드 수를 조회하는 구조로, 데이터 총량이 증가하면 성능 저하가 발생할 수 있습니다. Content를 조회하는 limit 및 offset 쿼리는 빠르게 처리되는(offset 비교적 크지 않은 초반 구간) **반면 Count 쿼리는 시간이 오래 걸려 병목 현상이 발생할 수 있습니다.** 또한, 여러 테이블을 조인하여 데이터를 조회하는 경우에는 조회 조건이 복잡해져 정확한 인덱스를 타겟팅하기 어려운 이슈가 발생할 수 있습니다. **이는 조회 조건에 부합하는 전체 레코드를 Count 하는 구조에서 필연적으로 발생할 수밖에 없는 문제입니다.**
 
 ### Count 쿼리의 최적화 문제
 
-이러한 문제 외에도 다른 문제가 있습니다. JPAQuery를 사용하여 Content 조회 쿼리와 레코드 Count 조회 쿼리를 동일하게 처리하면 성능적인 손해가 발생할 수 있습니다. 특히 여러 테이블을 조인하여 데이터를 조회하는 경우에 이 문제가 더 두드러집니다.
+이러한 문제 외에도 다른 문제가 있습니다. **JPAQuery를 사용하여 Content 조회 쿼리와 레코드 Count 조회 쿼리를 동일하게 처리하면 성능적인 손해가 발생할 수 있습니다.** 특히 여러 테이블을 조인하여 데이터를 조회하는 경우에 이 문제가 더 두드러집니다.
 
 ![](https://raw.githubusercontent.com/cheese10yun/blog-sample/master/query-dsl/docs/images/001.png)
 
@@ -82,7 +82,15 @@ from orders o
 where o.address = ? limit ?, ?
 ;
 
--- Count 조회 쿼리
+-- Content 조회 쿼리를 그대로 사용하는 경우
+select count(o.id)
+from orders o
+         left join coupon c on o.coupon_id = c.id
+         inner join user u on o.user_id = u.id
+where o.address = ?
+;
+
+-- Content 쿼리를 사용하지 않고 별도의 Count 조회 쿼리
 select count(o.id) ascount
 from orders o
 where o.address = ?
@@ -95,7 +103,7 @@ where o.address = ?
 
 ### Slice 기반으로 Count 쿼리를 사용하지 않는 방법
 
-JPA Slice 방식은 일반적인 Page 방식과는 다르게 Total Count를 조회하는 count 쿼리를 실행하지 않는 방식입니다. 이로 인해 조회 성능에 있어서 일정한 이점이 있습니다. 페이지 네이션 된 데이터를 불러올 때, 전체 데이터의 총개수를 파악하지 않고도 일부 데이터를 가져올 수 있기 때문에, Total Count가 필요 없는 상황에서 사용하면 성능을 향상시킬 수 있습니다. Slice 방식은 특히 대용량 데이터의 페이징 처리에 유용합니다. 이렇게 Slice 방식은 Total Count를 구하지 않고도 효율적인 페이징 처리를 가능하게 합니다. Total Count가 꼭 필요한 데이터인지 비즈니스 적으로 확인해 보고 꼭 필요한 데이터가 아니라면 사용하지 않는 것을 권장 드립니다.
+JPA Slice 방식은 Page 방식과는 다르게 Total Count를 조회하는 count 쿼리를 실행하지 않는 방식입니다. 따라서 Total Count를 조회하는데 드는 시간을 절약하여 성능적인 이점을 얻을 수 있습니다. 페이지네이션 된 데이터를 불러올 때, 전체 데이터의 총개수를 파악하지 않고도 일부 데이터를 가져올 수 있기 때문에, Total Count가 필요 없는 상황에서 사용하면 성능을 향상시킬 수 있습니다. Slice 방식은 특히 대용량 데이터의 페이징 처리에 유용합니다. 이렇게 Slice 방식은 Total Count를 구하지 않고도 효율적인 페이징 처리를 가능하게 합니다. Total Count가 꼭 필요한 데이터인지 비즈니스 적으로 확인해 보고 꼭 필요한 데이터가 아니라면 사용하지 않는 것을 권장 드립니다.
 
 #### Slice 페이징 처리 방법
 
