@@ -34,13 +34,10 @@ class MemberCustomRepositoryImpl(private val mongoTemplate: MongoTemplate) : Mem
 
 코드의 각 부분은 MongoDB를 사용하는 스프링 애플리케이션에서 도메인 객체를 정의하고, 저장소를 구성하는 데 필요한 요소들을 포함하고 있습니다. 아래는 코드 구조를 기반으로 한 정리입니다:
 
-1. **`Member` 클래스** - MongoDB의 'members' 컬렉션에 매핑되는 도메인 객체입니다. 'name'과 'email' 필드를 가지고 있으며, 각 필드는 MongoDB의 문서 필드에 맞추어 `@Field` 애노테이션을 사용하여 지정되어 있습니다. 또한, `Auditable`을 상속받아 생성 및 수정 시간에 대한 감사(audit) 정보를 자동으로 관리할 수 있습니다.
-
-2. **`MemberRepository` 인터페이스** - MongoDB의 기본 CRUD 작업을 위한 `MongoRepository`와 사용자 정의 쿼리를 위한 `MemberCustomRepository`, Querydsl 지원을 위한 `QuerydslPredicateExecutor`를 확장하는 저장소 인터페이스입니다. 이로 인해 `Member` 객체에 대한 표준 데이터 접근 패턴과 함께 복잡한 쿼리 기능을 제공합니다.
-
-3. **`MemberCustomRepository` 인터페이스** - 사용자 정의 쿼리를 위한 인터페이스로, 실제 사용자 정의 로직을 위한 메소드의 시그니처를 포함할 수 있습니다.
-
-4. **`MemberCustomRepositoryImpl` 클래스** - `MemberCustomRepository`의 구현체로, 실제 사용자 정의 쿼리 로직을 실행하는 메소드를 포함합니다. `MongoTemplate`을 주입받아 MongoDB의 복잡한 작업을 처리하는 데 사용됩니다.
+1. **`Member`** - MongoDB의 'members' 컬렉션에 매핑되는 도메인 객체입니다. 'name'과 'email' 필드를 가지고 있으며, 각 필드는 MongoDB의 문서 필드에 맞추어 `@Field` 애노테이션을 사용하여 지정되어 있습니다.
+2. **`MemberRepository`** - MongoDB의 기본 CRUD 작업을 위한 `MongoRepository`와 사용자 정의 쿼리를 위한 `MemberCustomRepository`, Querydsl 지원을 위한 `QuerydslPredicateExecutor`를 확장하는 저장소 인터페이스입니다. 이로 인해 `Member` 객체에 대한 표준 데이터 접근 패턴과 함께 복잡한 쿼리 기능을 제공합니다.
+3. **`MemberCustomRepository`** - 사용자 정의 쿼리를 위한 인터페이스로, 실제 사용자 정의 로직을 위한 메소드의 시그니처를 포함할 수 있습니다.
+4. **`MemberCustomRepositoryImpl`** - `MemberCustomRepository`의 구현체로, 실제 사용자 정의 쿼리 로직을 실행하는 메소드를 포함합니다. `MongoTemplate`을 주입받아 MongoDB의 복잡한 작업을 처리하는 데 사용됩니다.
 
 이 구성을 통해, 애플리케이션은 MongoDB에 대한 데이터 액세스를 추상화하고 효율적으로 관리할 수 있으며, 사용자 정의 저장소를 통해 비즈니스 로직에 맞는 복잡한 데이터 접근 패턴을 구현할 수 있어 애플리케이션의 유연성을 증가시키고 코드의 관리를 간소화합니다.
 
