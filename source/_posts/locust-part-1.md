@@ -75,9 +75,6 @@ Start new load test 버튼을 클릭하여 새로운 부하 테스트를 시작�
   * 정의: 테스트 시작부터 설정된 전체 사용자 수에 도달하기까지의 시간 또는 사용자가 점진적으로 증가하는 속도입니다.
   * 목적: 사용자 수가 점진적으로 증가하는 상황을 모델링하여, 애플리케이션이 사용자 증가 속도에 어떻게 대응하는지 평가합니다.
 
-* Number of total users to simulate: 시뮬레이션할 총 사용자 수를 설정합니다.
-* Hatch rate (users spawned/second): 초당 생성할 사용자 수를 설정합니다.
-
 ### Statistics
 
 ![](https://raw.githubusercontent.com/cheese10yun/blog-sample/master/locust/imag/locust_001.png)
