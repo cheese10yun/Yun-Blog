@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Locust 성능 테스트 도구 기능 소개
+title: Locust 성능 테스트 도구 소개 Part 2
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 date: 2024-04-07
