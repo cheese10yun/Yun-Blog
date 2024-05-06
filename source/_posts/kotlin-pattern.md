@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 코툴린 자주 사용하는 패턴 정리
+title: Kotlin 자주 사용하는 패턴 정리
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 date: 2024-05-06
 subtitle:
-tags:
+tags: Kotlin
 ---
 
 ## 불변 객체의 효율적 관리: `copy()` 메소드 활용
