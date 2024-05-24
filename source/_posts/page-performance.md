@@ -7,6 +7,7 @@ tags:
   - JPA
   - Querydsl
   - Performance
+  - Coroutines
 date: 2023-09-05 00:00:00
 subtitle:
 ---

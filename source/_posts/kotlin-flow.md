@@ -8,6 +8,7 @@ subtitle: Kotlin 코루틴으로 효율적인 대규모 요청 처리
 tags: 
  - Kotlin
  - Coroutines
+ - Performance
 ---
 
 
