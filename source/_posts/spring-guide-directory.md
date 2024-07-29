@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spring Guide - Directory
-subtitle: 패키기 구조 가이드
+subtitle: 패키지 구조 가이드
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
 tags:
