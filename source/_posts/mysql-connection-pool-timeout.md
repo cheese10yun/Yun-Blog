@@ -204,16 +204,14 @@ java.sql.SQLTransientConnectionException: Sample-HikariPool - Connection is not 
 ```kotlin
 @Transactional
 fun getMember(): Member {
-  val member = memberRepository.findById(Random.nextInt(1, 101).toLong()).get()
-  // runBlocking { delay(1000) } 블록킹 코드 제거
-  ...
-  return member
+    val member = memberRepository.findById(Random.nextInt(1, 101).toLong()).get()
+    // runBlocking { delay(1000) } 블록킹 코드 제거
+    ...
+    return member
 }
 ```
 
 위 코드에서 불필요한 블로킹 코드인 `runBlocking { delay(1000) }`를 제거함으로써 쿼리 실행 지연을 없앴습니다. 이와 같이, 쿼리 최적화는 단순히 코드 내의 블로킹 요소를 제거하는 것뿐만 아니라, **인덱스 추가**, **복잡한 조인 구조 단순화**, **캐싱** 등을 통해 데이터베이스에 대한 부하를 줄이는 방법도 포함됩니다. 이러한 최적화 작업을 통해 쿼리 실행 시간이 줄어들면 커넥션이 더 빨리 반환되고, **대기 중인 요청이 빠르게 처리**될 수 있습니다.
-
-### 쿼리 최적화에 따른 성능 향상
 
 ![](https://raw.githubusercontent.com/cheese10yun/blog-sample/master/kotlin-coroutine/images/mysql-connection-pool-4.png)
 
@@ -231,11 +229,11 @@ fun getMember(): Member {
 
 ```yaml
 spring:
-  datasource:
-    hikari:
-      maximum-pool-size: 10         # 최대 커넥션 수
-      minimum-idle: 10              # 최소 유휴 커넥션 수
-      connection-timeout: 2500      # 커넥션을 가져올 때 대기할 최대 시간 (밀리초)
+    datasource:
+        hikari:
+            maximum-pool-size: 10         # 최대 커넥션 수
+            minimum-idle: 10              # 최소 유휴 커넥션 수
+            connection-timeout: 2500      # 커넥션을 가져올 때 대기할 최대 시간 (밀리초)
 ```
 
 이 설정에서, `delay(1000)`는 유지하면서 `connection-timeout`을 2,500ms로 변경한 후 테스트를 진행하였습니다.
