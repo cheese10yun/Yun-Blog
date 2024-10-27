@@ -3,7 +3,7 @@ layout: post
 title: HikariCP로 MySQL Connection Pool 최적화하기
 catalog: true
 header-img: 'https://i.imgur.com/avC1Xor.jpg'
-date: 2024-10-21 01:15:31
+date: 2024-10-26
 subtitle: TPS 변화에 유연하게 대응하는 커넥션 풀 설정 방법
 tags:
 - MySQL
