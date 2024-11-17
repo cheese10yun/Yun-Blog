@@ -120,13 +120,6 @@ class RedisConnectionPoolSample(
 
 Hikari 설정은 `maximum-pool-size=1`, `minimum-idle=1`로 구성되어 있으며, `getComposite` 호출 시 사용 가능한 단 하나의 커넥션을 사용하여 작업이 진행됩니다. 이번 테스트의 목적은 **`/api/composite` 호출 이후 `getMySql` 호출의 응답 속도를 확인**하는 것입니다. 만약 Hikari Connection Pool이 블로킹 방식으로 동작한다면 `getComposite` 호출 중 MySQL 조회 요청으로 점유된 커넥션이 반환되지 않아 `getMySql` 요청은 대기 상태에 놓이고 응답 시간이 지연될 것입니다. 반대로 MySQL 조회 요청이 빠르게 완료되거나, 추가적인 idle 커넥션이 있다면 `getMySql` 요청은 지연 없이 처리될 수 있습니다.
 
-이때 로그:
-
-```txt
-totalConnections: 1, activeConnections: 1, idleConnections: 0, threadsAwaitingConnection: 0
-```
-
-위 로그를 통해 알 수 있듯이, 하나의 커넥션이 사용 중이며, 대기 중인 스레드는 없습니다.
 
 이 상태에서 `getMySql` 호출을 시도하면, 사용 가능한 **idle 커넥션**이 없기 때문에 `getComposite` 호출이 끝난 후 반환된 커넥션을 사용해야 합니다. 이로 인해 **threadsAwaitingConnection** 상태에서 대기하게 되고, 지연이 발생합니다. 이후 **threadsAwaitingConnection**에서 대기하던 요청이 **activeConnections**로 전환되면, `getMySql` 호출에서 해당 커넥션을 사용할 수 있게 됩니다.
 
@@ -160,12 +153,8 @@ Hikari Connection Pool의 동작 방식은 아래와 같습니다.
 
 #### 블로킹 방식의 한계
 
-이 시나리오에서 Hikari Connection Pool의 블로킹 특성으로 인해 다음과 같은 한계가 발생합니다:
+이 시나리오에서 Hikari Connection Pool의 블로킹 특성으로 인해 다음과 같은 한계가 발생합니다. MySQL A 조회 요청이 완료되기 전까지 커넥션이 반환되지 않아 `getMySql` 호출이 대기 상태에 놓이고, 동시 요청 수가 증가하면 **threadsAwaitingConnection** 상태가 늘어나면서 대기 시간이 길어질 가능성이 있습니다. 반면, Redis Lettuce 커넥션 풀은 이러한 상황에서 다르게 동작할 수 있습니다. Lettuce가 스레드를 블록시키는 방식으로 작동한다면 비슷한 지연 문제가 발생하지만, 논블로킹 방식이라면 MySQL의 지연과 관계없이 추가적인 Redis 요청에 빠르게 응답할 수 있습니다.
 
-- MySQL A 조회 요청이 완료되기 전까지 커넥션이 반환되지 않으므로, `getMySql` 호출은 대기 상태에 놓이게 됩니다.
-- 동시 요청 수가 많아지면 **threadsAwaitingConnection** 상태가 증가하여 대기 시간이 길어질 가능성이 높습니다.
-
-그렇다면 Redis Lettuce 커넥션 풀은 어떻게 동작하는지 살펴보겠습니다. Lettuce에서도 동일하게 스레드를 블록 시킨다면 지연이 발생할 것이며, 반대로 블록하지 않는다면 MySQL의 지연과 상관없이 추가적인 Redis 호출에 대해 빠르게 응답할 수 있을 것입니다.
 
 ### 시나리오: getComposite 호출 이후 getRedis 호출
 
@@ -191,7 +180,7 @@ Lettuce 설정은 `max-active=1`, `max-idle=1`, `min-idle=1`로 구성되어 있
 1. **`getComposite` 호출**: `Controller`가 `getComposite` 요청을 보냅니다. `Service`는 먼저 Redis 조회를 수행하며, 이 작업은 10ms 만에 완료되고 커넥션은 즉시 반환됩니다. 이후 MySQL 조회를 시작하며, MySQL 조회 작업은 2,500ms가 소요됩니다.
 2. **`getRedis` 호출**: MySQL 조회가 진행 중인 상태에서 `Controller`가 `getRedis` 요청을 보냅니다. Redis는 MySQL 작업과는 독립적으로 동작하므로, Redis 조회 요청은 지연 없이 처리됩니다. 반환된 Redis 커넥션이 즉시 재사용되어 `getRedis` 요청이 빠르게 완료됩니다.
 3. **`getComposite` 응답 반환**: MySQL 작업이 완료되면 `getComposite` 응답이 반환됩니다.
-4. **`getRedis` 응답 반환**: Redis 조회 요청이 완료된 후 응답이 반환됩니다. Redis 작업이 MySQL 작업의 지연과 상관없이 즉시 처리되었기 때문에 빠른 응답 시간을 유지합니다.
+4. **`getRedis` 응답 반환**: hRedis 조회 요청이 완료된 후 응답이 반환됩니다. Redis 작업이 MySQL 작업의 지연과 상관없이 즉시 처리되었기 때문에 빠른 응답 시간을 유지합니다.
 
 #### 논블로킹의 장점
 
