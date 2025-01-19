@@ -103,7 +103,7 @@ mongoTemplate.updateFirst(query, update, User::class.java)
 
 ## 효율적인 MongoDB 업데이트 전략
 
-`mongoTemplate.save`는 문서 전체를 교체하기 때문에 일반적인 경우에는 거의 사용되지 않습니다. 반면, `mongoRepository.save`는 더 직관적이며, 특히 Spring Data JPA 경험이 있는 개발자에게는 익숙하고 이해하기 쉬운 방식입니다. 그럼에도 불구하고, 저는 업데이트 작업에 **`mongoTemplate`기반의 업데이트만을 사용하고 있습니다. 그 이유는 다음과 같습니다.
+`mongoTemplate.save`는 문서 전체를 교체하기 때문에 일반적인 경우에는 거의 사용되지 않습니다. 반면, `mongoRepository.save`는 더 직관적이며, 특히 Spring Data JPA 경험이 있는 개발자에게는 익숙하고 이해하기 쉬운 방식입니다. 그럼에도 불구하고, 저는 업데이트 작업에 `mongoTemplate`기반의 업데이트만을 사용하고 있습니다. 그 이유는 다음과 같습니다.
 
 ### 대량 처리에서의 성능 차이
 
